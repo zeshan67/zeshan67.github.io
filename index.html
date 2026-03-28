@@ -25,7 +25,7 @@
     --accent: #FFDE21;
     --accent-deep: #E0BC00;
     --signal: #FF3D00;
-    --muted: #999990;
+    --muted: #737368;
     --ghost: #E8E8DF;
   }
 
@@ -93,7 +93,7 @@
   .landing-sub {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
-    font-size: clamp(0.5rem, 1.2vw, 0.78rem);
+    font-size: clamp(0.65rem, 1.56vw, 1.01rem);
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -183,7 +183,7 @@
   .coord-mark {
     position: absolute;
     font-family: 'Space Mono', monospace;
-    font-size: 9px; color: var(--muted);
+    font-size: 12px; color: var(--muted);
     opacity: 0; letter-spacing: 0.08em;
     animation: coordFade 2s ease-out forwards;
   }
@@ -240,7 +240,7 @@
 
   .page-index {
     font-family: 'Space Mono', monospace;
-    font-size: clamp(0.42rem, 1vw, 0.6rem);
+    font-size: clamp(0.55rem, 1.3vw, 0.78rem);
     color: var(--muted);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -377,7 +377,7 @@
   .research-focus p {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
-    font-size: clamp(0.48rem, 1.15vw, 0.78rem);
+    font-size: clamp(0.62rem, 1.5vw, 1.01rem);
     color: var(--muted);
     line-height: 1.7;
     letter-spacing: 0.02em;
@@ -430,7 +430,7 @@
     display: block;
     font-family: 'Space Mono', monospace;
     font-weight: 400;
-    font-size: clamp(0.44rem, 1.15vw, 0.78rem);
+    font-size: clamp(0.57rem, 1.5vw, 1.01rem);
     color: var(--muted);
     letter-spacing: 0.04em; line-height: 1.4;
     text-decoration: none; position: relative;
@@ -447,7 +447,7 @@
   .credential-secondary .cred-arrow-sm { display: inline-block; margin-left: 6px; opacity: 0; transform: translateX(-4px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
   .credential-secondary:hover .cred-arrow-sm { opacity: 0.7; transform: translateX(0); }
   .credential-secondary .cred-arrow-sm svg line, .credential-secondary .cred-arrow-sm svg polyline { stroke: var(--signal); stroke-width: 1.5; stroke-linecap: square; fill: none; }
-  .credential-secondary .cred-index { font-family: 'Space Mono', monospace; font-size: 0.55em; color: var(--signal); opacity: 0.5; margin-right: 6px; font-weight: 700; vertical-align: top; position: relative; top: 0.1em; transition: opacity 0.3s ease; }
+  .credential-secondary .cred-index { font-family: 'Space Mono', monospace; font-size: 0.72em; color: var(--signal); opacity: 0.5; margin-right: 6px; font-weight: 700; vertical-align: top; position: relative; top: 0.1em; transition: opacity 0.3s ease; }
   .credential-secondary:hover .cred-index { opacity: 1; }
 
   /* ---- CTA ---- */
@@ -518,7 +518,7 @@
 
   .content-block:hover { border-left-color: var(--accent); }
 
-  .block-category { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.4rem, 0.85vw, 0.6rem); color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: clamp(4px, 1%, 10px); opacity: 0.7; }
+  .block-category { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.52rem, 1.1vw, 0.78rem); color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: clamp(4px, 1%, 10px); opacity: 0.7; }
 
   .block-title { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.65rem, 1.8vw, 1.25rem); color: var(--ink); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: clamp(6px, 1.2%, 14px); word-wrap: break-word; overflow-wrap: break-word; }
 
@@ -529,19 +529,19 @@
   .block-meta { display: flex; flex-direction: column; gap: clamp(2px, 0.4%, 5px); margin-bottom: clamp(8px, 1.5%, 16px); }
   .block-meta-row { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
 
-  .meta-label { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.38rem, 0.75vw, 0.55rem); color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; flex-shrink: 0; opacity: 0.6; }
+  .meta-label { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.49rem, 0.98vw, 0.72rem); color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; flex-shrink: 0; opacity: 0.6; }
 
-  .meta-link { font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.44rem, 1.15vw, 0.78rem); color: var(--muted); text-decoration: none; letter-spacing: 0.02em; line-height: 1.4; position: relative; transition: color 0.3s ease; word-wrap: break-word; overflow-wrap: break-word; }
+  .meta-link { font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.57rem, 1.5vw, 1.01rem); color: var(--muted); text-decoration: none; letter-spacing: 0.02em; line-height: 1.4; position: relative; transition: color 0.3s ease; word-wrap: break-word; overflow-wrap: break-word; }
   .meta-link .meta-text { position: relative; display: inline; }
   .meta-link .meta-text::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
   .meta-link:hover .meta-text::after { transform: scaleX(1); }
   .meta-link:hover { color: var(--ink); }
 
-  .meta-value { font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.44rem, 1.15vw, 0.78rem); color: var(--muted); letter-spacing: 0.02em; line-height: 1.4; }
+  .meta-value { font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.57rem, 1.5vw, 1.01rem); color: var(--muted); letter-spacing: 0.02em; line-height: 1.4; }
 
   .block-actions { display: flex; align-items: center; flex-wrap: wrap; gap: clamp(6px, 1.5%, 16px); }
 
-  .block-action { display: inline-flex; align-items: center; gap: 5px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.44rem, 1.15vw, 0.78rem); color: var(--muted); text-decoration: none; letter-spacing: 0.04em; position: relative; transition: color 0.3s ease; cursor: pointer; }
+  .block-action { display: inline-flex; align-items: center; gap: 5px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(0.57rem, 1.5vw, 1.01rem); color: var(--muted); text-decoration: none; letter-spacing: 0.04em; position: relative; transition: color 0.3s ease; cursor: pointer; }
   .block-action .action-text { position: relative; display: inline; transition: color 0.3s ease; }
   .block-action .action-text::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 1.5px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
   .block-action:hover .action-text::after { transform: scaleX(1); }
@@ -554,7 +554,7 @@
   .block-action.coming-soon { cursor: default; opacity: 0.6; }
   .block-action.coming-soon .action-text::after { display: none; }
   .block-action.coming-soon:hover .action-text { color: var(--muted); }
-  .block-action.coming-soon .soon-tag { font-family: 'Space Mono', monospace; font-size: 0.6em; color: var(--signal); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; border: 1px solid var(--signal); padding: 1px 5px; margin-left: 4px; opacity: 0.8; }
+  .block-action.coming-soon .soon-tag { font-family: 'Space Mono', monospace; font-size: 0.78em; color: var(--signal); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; border: 1px solid var(--signal); padding: 1px 5px; margin-left: 4px; opacity: 0.8; }
 
   /* ============================================
      SOCIAL RIBBON
@@ -580,7 +580,7 @@
     background: var(--accent);
   }
 
-  .social-link { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.44rem, 1.15vw, 0.78rem); color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; position: relative; transition: color 0.3s ease; display: inline-flex; align-items: center; gap: 5px; }
+  .social-link { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.57rem, 1.5vw, 1.01rem); color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; position: relative; transition: color 0.3s ease; display: inline-flex; align-items: center; gap: 5px; }
   .social-link .link-text { position: relative; display: inline; }
   .social-link .link-text::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
   .social-link:hover .link-text::after { transform: scaleX(1); }
@@ -615,17 +615,17 @@
     .float-shape.circle-ring, .float-shape.cross-mark { display: none; }
     .coord-mark.c2, .coord-mark.c3 { display: none; }
     .credential-primary { font-size: clamp(0.5rem, 2.5vw, 0.82rem); }
-    .credential-secondary { font-size: clamp(0.42rem, 2.2vw, 0.65rem); }
-    .research-focus p { font-size: clamp(0.42rem, 2.2vw, 0.65rem); }
+    .credential-secondary { font-size: clamp(0.55rem, 2.86vw, 0.85rem); }
+    .research-focus p { font-size: clamp(0.55rem, 2.86vw, 0.85rem); }
     .content-section { padding-left: clamp(18px, 6%, 40px); padding-right: 8%; }
     .content-section::before { width: 4px; }
-    .block-title { font-size: clamp(0.55rem, 3vw, 0.95rem); }
+    .block-title { font-size: clamp(0.72rem, 3.9vw, 1.24rem); }
     .block-meta-row { flex-direction: column; gap: 2px; }
     .block-actions { flex-direction: column; align-items: flex-start; gap: clamp(5px, 1.5%, 10px); }
     .action-divider { display: none; }
     .social-ribbon { padding-left: clamp(18px, 6%, 40px); }
     .social-ribbon::before { width: 4px; }
-    .social-link { font-size: clamp(0.42rem, 2.5vw, 0.65rem); }
+    .social-link { font-size: clamp(0.55rem, 3.25vw, 0.85rem); }
     .ribbon-cross { width: clamp(8px, 3vw, 12px); height: clamp(8px, 3vw, 12px); }
   }
 
@@ -644,27 +644,26 @@
     .hero-cta { padding: 8px 14px; font-size: 0.48rem; }
     .hero-bg .ghost-letter { font-size: 10rem; opacity: 0.3; }
     .hero-bg .accent-bar { width: 3px; }
-    .page-index { font-size: 0.38rem; }
+    .page-index { font-size: 0.49rem; }
     .landing-name { font-size: clamp(1.4rem, 7vw, 1.8rem); }
     .landing-overlay { padding: 10% 5%; }
     .float-shape.diamond { display: none; }
     .credential-primary { font-size: clamp(0.46rem, 3.2vw, 0.7rem); }
-    .credential-secondary { font-size: clamp(0.38rem, 2.8vw, 0.55rem); }
-    .credential-secondary .cred-index { display: none; }
+    .credential-secondary { font-size: clamp(0.49rem, 3.64vw, 0.72rem); }
     .research-focus { padding-left: clamp(10px, 3%, 16px); }
-    .research-focus p { font-size: clamp(0.38rem, 2.8vw, 0.55rem); line-height: 1.6; }
+    .research-focus p { font-size: clamp(0.49rem, 3.64vw, 0.72rem); line-height: 1.6; }
     .research-focus::before { width: 2px; }
     .content-section { padding-left: 16px; padding-right: 5%; }
     .content-section::before { width: 3px; }
-    .block-title { font-size: clamp(0.5rem, 4vw, 0.78rem); }
-    .block-category { font-size: clamp(0.35rem, 2.5vw, 0.48rem); }
-    .meta-link, .meta-value, .block-action { font-size: clamp(0.38rem, 2.8vw, 0.55rem); }
-    .meta-label { font-size: clamp(0.33rem, 2vw, 0.42rem); }
+    .block-title { font-size: clamp(0.65rem, 5.2vw, 1.01rem); }
+    .block-category { font-size: clamp(0.46rem, 3.25vw, 0.62rem); }
+    .meta-link, .meta-value, .block-action { font-size: clamp(0.49rem, 3.64vw, 0.72rem); }
+    .meta-label { font-size: clamp(0.43rem, 2.6vw, 0.55rem); }
     .section-header { margin-bottom: clamp(14px, 3.5%, 28px); }
     .content-block { padding-left: clamp(10px, 3%, 16px); }
     .social-ribbon { padding: 12px 16px; gap: 5px; }
     .social-ribbon::before { width: 3px; }
-    .social-link { font-size: clamp(0.38rem, 3vw, 0.52rem); letter-spacing: 0.05em; }
+    .social-link { font-size: clamp(0.49rem, 3.9vw, 0.68rem); letter-spacing: 0.05em; }
     .ribbon-cross { width: 8px; height: 8px; }
     .ribbon-cross::before { height: 1.5px; } .ribbon-cross::after { width: 1.5px; }
   }
