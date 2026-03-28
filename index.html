@@ -191,6 +191,10 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .ribbon-cross .cross-ring{position:absolute;inset:-2px;border:1px solid var(--signal);border-radius:50%;opacity:.3;animation:ringPulse 3s ease-in-out infinite}
 .ribbon-cross:nth-of-type(2) .cross-ring{animation-delay:1.5s}
 
+.site-footer{width:100%;background:var(--bg);padding:clamp(14px,2%,24px) clamp(22px,6%,90px);position:relative;opacity:0;animation:sectionReveal .5s ease-out 3.5s forwards}
+.site-footer::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
+.footer-text{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.42rem,1vw,.7rem);color:var(--muted);letter-spacing:.08em;opacity:.6}
+
 @media(max-width:900px){
 .hero-content{max-width:100%}
 .hero-bg .ghost-letter{font-size:clamp(12rem,45vw,28rem);right:-5%}
@@ -222,6 +226,8 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .social-ribbon::before{width:4px}
 .social-link{font-size:clamp(.46rem,2.9vw,.75rem)}
 .ribbon-cross{width:clamp(8px,2.7vw,14px);height:clamp(8px,2.7vw,14px)}
+.site-footer{padding-left:clamp(18px,6%,40px)}
+.site-footer::before{width:4px}
 }
 @media(max-width:520px){
 .hero-tagline{flex-wrap:wrap;white-space:normal}
@@ -260,6 +266,9 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .social-link{font-size:clamp(.42rem,3.5vw,.66rem);letter-spacing:.05em}
 .ribbon-cross{width:8px;height:8px}
 .ribbon-cross::before{height:1.5px}.ribbon-cross::after{width:1.5px}
+.site-footer{padding:10px 16px}
+.site-footer::before{width:3px}
+.footer-text{font-size:clamp(.38rem,2.8vw,.55rem)}
 }
 </style>
 </head>
@@ -363,6 +372,9 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 <span class="ribbon-cross"><span class="cross-ring"></span></span>
 <a href="https://github.com/zeshan67" target="_blank" rel="noopener" class="social-link"><span class="link-text">GitHub</span><span class="link-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
 </div>
+<footer class="site-footer">
+<p class="footer-text">© 2025–26 Asif Hasan Zeshan — Designed at the intersection of data and imagination.</p>
+</footer>
 </body>
 </html>
 
