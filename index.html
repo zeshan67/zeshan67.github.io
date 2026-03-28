@@ -13,15 +13,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --bg: #F5F2F0;
-    --ink: #1A1A1A;
-    --accent: #FFDE21;
-    --accent-deep: #E0BC00;
-    --signal: #CC3100;
-    --muted: #636359;
-    --ghost: #E8E8DF;
-  }
+  :root { --bg: #F5F2F0; --ink: #1A1A1A; --accent: #FFDE21; --accent-deep: #E0BC00; --signal: #CC3100; --muted: #636359; --ghost: #E8E8DF; }
   html, body { margin: 0; padding: 0; width: 100%; background: var(--bg); font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   .landing-overlay { position: fixed; inset: 0; z-index: 2000; background: var(--ink); display: flex; align-items: flex-end; justify-content: flex-start; padding: 8% 6%; animation: overlayKill 0.01s linear 1.4s forwards; }
   .landing-overlay::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--ink); animation: overlayWipe 0.45s cubic-bezier(0.77, 0, 0.175, 1) 1.05s forwards; transform-origin: top; z-index: 1; }
@@ -128,7 +120,7 @@
   .content-blocks { display: flex; flex-direction: column; gap: clamp(20px, 3.5%, 45px); width: 100%; }
   .content-block { position: relative; padding-left: clamp(12px, 2.5%, 28px); border-left: 2px solid var(--ghost); transition: border-color 0.4s ease; width: 100%; }
   .content-block:hover { border-left-color: var(--accent); }
-  .block-category { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.58rem, 1.38vw, 0.94rem); color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: clamp(4px, 1%, 10px); opacity: 0.8; }
+  .block-category { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.53rem, 1.38vw, 0.94rem); color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: clamp(4px, 1%, 10px); opacity: 0.8; }
   .block-title { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(0.55rem, 1.6vw, 1.1rem); color: var(--ink); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: clamp(6px, 1.2%, 14px); word-wrap: break-word; overflow-wrap: break-word; }
   .block-title .inline-link { color: var(--ink); text-decoration: none; position: relative; transition: color 0.3s ease; }
   .block-title .inline-link::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
