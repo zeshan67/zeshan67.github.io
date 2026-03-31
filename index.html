@@ -81,7 +81,7 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .hero-name .name-last{opacity:0;animation:nameWordIn .4s cubic-bezier(.16,1,.3,1) 1.85s forwards;color:var(--ink);position:relative;display:inline}
 @keyframes nameWordIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @keyframes nameReveal{from{opacity:0}to{opacity:1}}
-.hero-name .name-last::after{content:'';position:absolute;left:-4px;bottom:-0.05em;width:calc(100% + 8px);height:.15em;background:var(--accent);z-index:-1;transform:scaleX(0);transform-origin:left;animation:highlightSwipe .4s cubic-bezier(.16,1,.3,1) 2.15s forwards}
+.hero-name .name-last::after{content:'';position:absolute;left:-4px;bottom:.18em;width:calc(100% + 8px);height:.2em;background:var(--accent);z-index:-1;transform:scaleX(0);transform-origin:left;animation:highlightSwipe .4s cubic-bezier(.16,1,.3,1) 2.15s forwards}
 .hero-name::before,.hero-name::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0}
 .hero-name::before{color:var(--signal);z-index:1;animation:glitchR .8s cubic-bezier(.25,.46,.45,.94) 2.5s forwards}
 .hero-name::after{color:var(--accent);z-index:1;animation:glitchB .8s cubic-bezier(.25,.46,.45,.94) 2.5s forwards}
