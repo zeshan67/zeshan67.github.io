@@ -158,10 +158,6 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .block-action:hover .action-arrow{opacity:.7;transform:translateX(0)}
 .block-action .action-arrow svg line,.block-action .action-arrow svg polyline{stroke:var(--signal);stroke-width:1.5;stroke-linecap:square;fill:none}
 .action-divider{width:1px;height:14px;background:var(--ghost);flex-shrink:0}
-.block-action.coming-soon{cursor:default;opacity:.6}
-.block-action.coming-soon .action-text::after{display:none}
-.block-action.coming-soon:hover .action-text{color:var(--muted)}
-.block-action.coming-soon .soon-tag{font-family:'Space Mono',monospace;font-size:.75em;color:var(--signal);letter-spacing:.1em;text-transform:uppercase;font-weight:700;border:1.5px solid var(--signal);padding:2px 6px;margin-left:6px;opacity:.8}
 .social-ribbon{position:relative;z-index:1;width:100%;background:var(--bg);display:flex;align-items:center;justify-content:flex-start;padding:clamp(16px,2.5%,28px) clamp(22px,6%,90px);gap:clamp(8px,1.5%,16px);flex-wrap:nowrap;white-space:nowrap;opacity:0;animation:sectionReveal .5s ease-out 3.3s forwards}
 .social-ribbon::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
 .social-link{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;position:relative;transition:color .3s ease;display:inline-flex;align-items:center;gap:5px}
@@ -181,81 +177,10 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 .site-footer{position:relative;z-index:1;width:100%;background:var(--bg);padding:clamp(14px,2%,24px) clamp(22px,6%,90px);opacity:0;animation:sectionReveal .5s ease-out 3.5s forwards}
 .site-footer::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
 .footer-text{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.42rem,1vw,.7rem);color:var(--muted);letter-spacing:.08em;opacity:.6}
-@media(max-width:900px){
-.hero-content{max-width:100%}
-.hero-bg .ghost-letter{font-size:clamp(12rem,45vw,28rem);right:-5%}
-.hero-name{white-space:normal}
-}
-@media(max-width:680px){
-.hero-content{padding-left:clamp(18px,6%,40px);padding-right:12%}
-.hero-name{font-size:clamp(1.8rem,9vw,3rem)}
-.tag-segment{font-size:clamp(.48rem,2.5vw,.78rem)}
-.spin-cross{width:clamp(8px,3vw,14px);height:clamp(8px,3vw,14px)}
-.hero-bg .ghost-letter{font-size:clamp(10rem,50vw,18rem);right:-8%;top:-3%}
-.hero-bg .accent-bar{width:4px}
-.float-shape.circle-ring,.float-shape.cross-mark{display:none}
-.coord-mark.c2,.coord-mark.c3{display:none}
-.credential-primary{font-size:clamp(.5rem,2.5vw,.82rem)}
-.credential-secondary{font-size:clamp(.46rem,2.4vw,.75rem)}
-.research-focus p{font-size:clamp(.46rem,2.4vw,.75rem)}
-.content-section{padding-left:clamp(18px,6%,40px);padding-right:8%}
-.content-section::before{width:4px}
-.content-section .page-index{font-size:clamp(.53rem,2.5vw,.72rem)}
-.block-title{font-size:clamp(.5rem,2.5vw,.82rem)}
-.block-category{font-size:clamp(.46rem,2.4vw,.75rem)}
-.meta-label{font-size:clamp(.4rem,1.9vw,.6rem)}
-.meta-link,.meta-value,.block-action{font-size:clamp(.46rem,2.4vw,.75rem)}
-.block-meta-row{flex-direction:column;gap:2px}
-.block-actions{flex-direction:column;align-items:flex-start;gap:clamp(5px,1.5%,10px)}
-.action-divider{display:none}
-.social-ribbon{padding-left:clamp(18px,6%,40px)}
-.social-ribbon::before{width:4px}
-.social-link{font-size:clamp(.46rem,2.9vw,.75rem)}
-.ribbon-cross{width:clamp(8px,2.7vw,14px);height:clamp(8px,2.7vw,14px)}
-.site-footer{padding-left:clamp(18px,6%,40px)}
-.site-footer::before{width:4px}
-}
-@media(max-width:520px){
-.hero-tagline{flex-wrap:wrap;white-space:normal}
-.social-ribbon{flex-wrap:wrap;white-space:normal}
-.hero-name .name-line{display:block}
-}
-@media(max-width:420px){
-.hero-content{padding-left:16px;padding-right:10%}
-.hero-name{font-size:clamp(1.5rem,10vw,2.2rem);letter-spacing:-.03em}
-.tag-segment{font-size:clamp(.42rem,3vw,.58rem);letter-spacing:.04em}
-.spin-cross{width:8px;height:8px}
-.spin-cross::before{height:1.5px}.spin-cross::after{width:1.5px}
-.hero-cta{padding:10px 18px;font-size:.55rem}
-.hero-bg .ghost-letter{font-size:10rem;opacity:.3}
-.hero-bg .accent-bar{width:3px}
-.page-index{font-size:.57rem}
-.content-section .page-index{font-size:.57rem}
-.landing-name{font-size:clamp(1.4rem,7vw,1.8rem)}
-.landing-overlay{padding:10% 5%}
-.float-shape.diamond{display:none}
-.credential-primary{font-size:clamp(.46rem,3.2vw,.7rem)}
-.credential-secondary{font-size:clamp(.42rem,3.36vw,.66rem)}
-.research-focus{padding-left:clamp(10px,3%,16px)}
-.research-focus p{font-size:clamp(.42rem,3.36vw,.66rem);line-height:1.6}
-.research-focus::before{width:2px}
-.content-section{padding-left:16px;padding-right:5%}
-.content-section::before{width:3px}
-.block-title{font-size:clamp(.46rem,3.2vw,.7rem)}
-.block-category{font-size:clamp(.42rem,3.36vw,.66rem)}
-.meta-link,.meta-value,.block-action{font-size:clamp(.42rem,3.36vw,.66rem)}
-.meta-label{font-size:clamp(.36rem,2.7vw,.52rem)}
-.section-header{margin-bottom:clamp(14px,3.5%,28px)}
-.content-block{padding-left:clamp(10px,3%,16px)}
-.social-ribbon{padding:12px 16px;gap:6px}
-.social-ribbon::before{width:3px}
-.social-link{font-size:clamp(.42rem,3.5vw,.66rem);letter-spacing:.05em}
-.ribbon-cross{width:8px;height:8px}
-.ribbon-cross::before{height:1.5px}.ribbon-cross::after{width:1.5px}
-.site-footer{padding:10px 16px}
-.site-footer::before{width:3px}
-.footer-text{font-size:clamp(.38rem,2.8vw,.55rem)}
-}
+@media(max-width:900px){.hero-content{max-width:100%}.hero-bg .ghost-letter{font-size:clamp(12rem,45vw,28rem);right:-5%}.hero-name{white-space:normal}}
+@media(max-width:680px){.hero-content{padding-left:clamp(18px,6%,40px);padding-right:12%}.hero-name{font-size:clamp(1.8rem,9vw,3rem)}.tag-segment{font-size:clamp(.48rem,2.5vw,.78rem)}.spin-cross{width:clamp(8px,3vw,14px);height:clamp(8px,3vw,14px)}.hero-bg .ghost-letter{font-size:clamp(10rem,50vw,18rem);right:-8%;top:-3%}.hero-bg .accent-bar{width:4px}.float-shape.circle-ring,.float-shape.cross-mark{display:none}.coord-mark.c2,.coord-mark.c3{display:none}.credential-primary{font-size:clamp(.5rem,2.5vw,.82rem)}.credential-secondary{font-size:clamp(.46rem,2.4vw,.75rem)}.research-focus p{font-size:clamp(.46rem,2.4vw,.75rem)}.content-section{padding-left:clamp(18px,6%,40px);padding-right:8%}.content-section::before{width:4px}.content-section .page-index{font-size:clamp(.53rem,2.5vw,.72rem)}.block-title{font-size:clamp(.5rem,2.5vw,.82rem)}.block-category{font-size:clamp(.46rem,2.4vw,.75rem)}.meta-label{font-size:clamp(.4rem,1.9vw,.6rem)}.meta-link,.meta-value,.block-action{font-size:clamp(.46rem,2.4vw,.75rem)}.block-meta-row{flex-direction:column;gap:2px}.block-actions{flex-direction:column;align-items:flex-start;gap:clamp(5px,1.5%,10px)}.action-divider{display:none}.social-ribbon{padding-left:clamp(18px,6%,40px)}.social-ribbon::before{width:4px}.social-link{font-size:clamp(.46rem,2.9vw,.75rem)}.ribbon-cross{width:clamp(8px,2.7vw,14px);height:clamp(8px,2.7vw,14px)}.site-footer{padding-left:clamp(18px,6%,40px)}.site-footer::before{width:4px}}
+@media(max-width:520px){.hero-tagline{flex-wrap:wrap;white-space:normal}.social-ribbon{flex-wrap:wrap;white-space:normal}.hero-name .name-line{display:block}}
+@media(max-width:420px){.hero-content{padding-left:16px;padding-right:10%}.hero-name{font-size:clamp(1.5rem,10vw,2.2rem);letter-spacing:-.03em}.tag-segment{font-size:clamp(.42rem,3vw,.58rem);letter-spacing:.04em}.spin-cross{width:8px;height:8px}.spin-cross::before{height:1.5px}.spin-cross::after{width:1.5px}.hero-cta{padding:10px 18px;font-size:.55rem}.hero-bg .ghost-letter{font-size:10rem;opacity:.3}.hero-bg .accent-bar{width:3px}.page-index{font-size:.57rem}.content-section .page-index{font-size:.57rem}.landing-name{font-size:clamp(1.4rem,7vw,1.8rem)}.landing-overlay{padding:10% 5%}.float-shape.diamond{display:none}.credential-primary{font-size:clamp(.46rem,3.2vw,.7rem)}.credential-secondary{font-size:clamp(.42rem,3.36vw,.66rem)}.research-focus{padding-left:clamp(10px,3%,16px)}.research-focus p{font-size:clamp(.42rem,3.36vw,.66rem);line-height:1.6}.research-focus::before{width:2px}.content-section{padding-left:16px;padding-right:5%}.content-section::before{width:3px}.block-title{font-size:clamp(.46rem,3.2vw,.7rem)}.block-category{font-size:clamp(.42rem,3.36vw,.66rem)}.meta-link,.meta-value,.block-action{font-size:clamp(.42rem,3.36vw,.66rem)}.meta-label{font-size:clamp(.36rem,2.7vw,.52rem)}.section-header{margin-bottom:clamp(14px,3.5%,28px)}.content-block{padding-left:clamp(10px,3%,16px)}.social-ribbon{padding:12px 16px;gap:6px}.social-ribbon::before{width:3px}.social-link{font-size:clamp(.42rem,3.5vw,.66rem);letter-spacing:.05em}.ribbon-cross{width:8px;height:8px}.ribbon-cross::before{height:1.5px}.ribbon-cross::after{width:1.5px}.site-footer{padding:10px 16px}.site-footer::before{width:3px}.footer-text{font-size:clamp(.38rem,2.8vw,.55rem)}}
 </style>
 </head>
 <body>
@@ -324,7 +249,7 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 <div class="block-meta-row"><span class="meta-label">With</span><a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">Dr. Xiao Hu</span></a></div>
 <div class="block-meta-row"><span class="meta-label">At</span><a href="https://www.ischools.org/post/iconference-2026-call-for-papers" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">iConference 2026 — Edinburgh Napier University</span></a></div>
 </div>
-<div class="block-actions"><span class="block-action coming-soon"><span class="action-text">Publication & Presentation Coming Soon</span><span class="soon-tag">Soon</span></span></div>
+<div class="block-actions"><a href="https://publicera.kb.se/ir/article/view/64273" target="_blank" rel="noopener" class="block-action"><span class="action-text">Explore the Project »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
 </div>
 </div>
 </section>
@@ -332,22 +257,22 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 <div class="section-header"><div class="page-index"><span class="idx-num">003</span><span class="idx-dash">——</span><span class="idx-label">Dispatch</span></div></div>
 <div class="content-blocks">
 <div class="content-block">
-<div class="block-category">Conference</div>
-<h2 class="block-title">Heading to 2026 ARCC-EAAE International Conference: Local Solutions for Global Issues</h2>
+<div class="block-category">Award</div>
+<h2 class="block-title">Awarded "Best Poster Award" at the 2026 ARCC-EAAE International Conference</h2>
 <div class="block-meta">
 <div class="block-meta-row"><span class="meta-label">Where</span><span class="meta-value">Atlanta, GA, USA</span></div>
 <div class="block-meta-row"><span class="meta-label">When</span><span class="meta-value">April 08, 2026 — April 11, 2026</span></div>
 </div>
-<div class="block-actions"><a href="https://www.arcc-arch.org/2026-arcc-eaae-international-conference-local-solutions-for-global-issues/" target="_blank" rel="noopener" class="block-action"><span class="action-text">Know More About the Conference »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
+<div class="block-actions"><a href="https://www.arcc-arch.org/meet-the-arcc-2026-awards-recipients/" target="_blank" rel="noopener" class="block-action"><span class="action-text">ARCC-EAAE 2026 Award Winners »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
 </div>
 <div class="content-block">
-<div class="block-category">Call for Contributions</div>
-<h2 class="block-title">Hosting "Stories on Three Wheels" Call for Contribution for Photography, Illustration & Short Videos with <a href="https://www.placemakingbangladesh.org/" target="_blank" rel="noopener" class="inline-link">Placemaking Bangladesh</a></h2>
+<div class="block-category">Exhibition</div>
+<h2 class="block-title">Hosted "Stories on Three Wheels" Exhibition and Award Ceremony in Collaboration with <a href="https://www.claymire.site" target="_blank" rel="noopener" class="inline-link">Claymire</a></h2>
 <div class="block-meta">
 <div class="block-meta-row"><span class="meta-label">Where</span><span class="meta-value">Dhaka, Bangladesh</span></div>
-<div class="block-meta-row"><span class="meta-label">When</span><span class="meta-value">Deadline: April 5, 2026</span></div>
+<div class="block-meta-row"><span class="meta-label">When</span><span class="meta-value">May 16, 2026</span></div>
 </div>
-<div class="block-actions"><a href="https://www.claymire.site/stories-on-three-wheels" target="_blank" rel="noopener" class="block-action"><span class="action-text">Submit Your Contribution »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
+<div class="block-actions"><a href="https://www.claymire.site/past-competition/stories-on-three-wheels/competition-entries" target="_blank" rel="noopener" class="block-action"><span class="action-text">Explore Highlighted Entries »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
 </div>
 </div>
 </section>
@@ -362,121 +287,7 @@ html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM San
 <p class="footer-text">© 2025–26 Asif Hasan Zeshan — Designed at the intersection of data and imagination.</p>
 </footer>
 <script>
-(function(){
-var c=document.getElementById('entropy-bg');
-if(!c)return;
-var ctx=c.getContext('2d');
-if(!ctx)return;
-var w,h,particles=[],time=0,animId;
-var color='#1A1A1A';
-function resize(){
-var dpr=window.devicePixelRatio||1;
-w=window.innerWidth;
-h=Math.max(document.documentElement.scrollHeight,window.innerHeight);
-c.width=w*dpr;
-c.height=h*dpr;
-c.style.width=w+'px';
-c.style.height=h+'px';
-ctx.setTransform(1,0,0,1,0,0);
-ctx.scale(dpr,dpr);
-init();
-}
-function Particle(x,y,order){
-this.x=x;this.y=y;
-this.originalX=x;this.originalY=y;
-this.size=1.5;this.order=order;
-this.vx=(Math.random()-0.5)*1.5;
-this.vy=(Math.random()-0.5)*1.5;
-this.influence=0;this.neighbors=[];
-}
-Particle.prototype.update=function(){
-if(this.order){
-var dx=this.originalX-this.x;
-var dy=this.originalY-this.y;
-var cx=0,cy=0;
-for(var i=0;i<this.neighbors.length;i++){
-var n=this.neighbors[i];
-if(!n.order){
-var d=Math.hypot(this.x-n.x,this.y-n.y);
-var s=Math.max(0,1-d/120);
-cx+=n.vx*s;cy+=n.vy*s;
-this.influence=Math.max(this.influence,s);
-}}
-this.x+=dx*0.04*(1-this.influence)+cx*this.influence;
-this.y+=dy*0.04*(1-this.influence)+cy*this.influence;
-this.influence*=0.99;
-}else{
-this.vx+=(Math.random()-0.5)*0.4;
-this.vy+=(Math.random()-0.5)*0.4;
-this.vx*=0.95;this.vy*=0.95;
-this.x+=this.vx;this.y+=this.vy;
-if(this.x<w*0.5||this.x>w)this.vx*=-1;
-if(this.y<0||this.y>h)this.vy*=-1;
-this.x=Math.max(w*0.5,Math.min(w,this.x));
-this.y=Math.max(0,Math.min(h,this.y));
-}};
-Particle.prototype.draw=function(ctx){
-var a=this.order?0.7-this.influence*0.4:0.7;
-var hex=Math.round(a*255).toString(16);
-if(hex.length<2)hex='0'+hex;
-ctx.fillStyle=color+hex;
-ctx.beginPath();
-ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-ctx.fill();
-};
-function init(){
-particles=[];
-var cols=Math.floor(w/35);
-var rows=Math.floor(h/35);
-if(cols<5)cols=5;if(rows<5)rows=5;
-var sx=w/cols;var sy=h/rows;
-for(var i=0;i<cols;i++){
-for(var j=0;j<rows;j++){
-var x=sx*i+sx/2;
-var y=sy*j+sy/2;
-var order=x<w*0.5;
-particles.push(new Particle(x,y,order));
-}}
-}
-function updateNeighbors(){
-for(var i=0;i<particles.length;i++){
-particles[i].neighbors=[];
-for(var j=0;j<particles.length;j++){
-if(i===j)continue;
-var d=Math.hypot(particles[i].x-particles[j].x,particles[i].y-particles[j].y);
-if(d<120)particles[i].neighbors.push(particles[j]);
-}}
-}
-function animate(){
-ctx.clearRect(0,0,w,h);
-if(time%30===0)updateNeighbors();
-for(var i=0;i<particles.length;i++){
-var p=particles[i];
-p.update();p.draw(ctx);
-for(var j=0;j<p.neighbors.length;j++){
-var n=p.neighbors[j];
-var d=Math.hypot(p.x-n.x,p.y-n.y);
-if(d<60){
-var a=0.15*(1-d/60);
-var hex=Math.round(a*255).toString(16);
-if(hex.length<2)hex='0'+hex;
-ctx.strokeStyle=color+hex;
-ctx.lineWidth=0.5;
-ctx.beginPath();
-ctx.moveTo(p.x,p.y);
-ctx.lineTo(n.x,n.y);
-ctx.stroke();
-}}}
-time++;animId=requestAnimationFrame(animate);
-}
-resize();
-window.addEventListener('resize',function(){
-cancelAnimationFrame(animId);
-resize();animate();
-});
-setTimeout(function(){resize();animate();},3000);
-animate();
-})();
+(function(){var c=document.getElementById('entropy-bg');if(!c)return;var ctx=c.getContext('2d');if(!ctx)return;var w,h,particles=[],time=0,animId;var color='#1A1A1A';function resize(){var dpr=window.devicePixelRatio||1;w=window.innerWidth;h=Math.max(document.documentElement.scrollHeight,window.innerHeight);c.width=w*dpr;c.height=h*dpr;c.style.width=w+'px';c.style.height=h+'px';ctx.setTransform(1,0,0,1,0,0);ctx.scale(dpr,dpr);init()}function Particle(x,y,order){this.x=x;this.y=y;this.originalX=x;this.originalY=y;this.size=1.5;this.order=order;this.vx=(Math.random()-0.5)*1.5;this.vy=(Math.random()-0.5)*1.5;this.influence=0;this.neighbors=[]}Particle.prototype.update=function(){if(this.order){var dx=this.originalX-this.x;var dy=this.originalY-this.y;var cx=0,cy=0;for(var i=0;i<this.neighbors.length;i++){var n=this.neighbors[i];if(!n.order){var d=Math.hypot(this.x-n.x,this.y-n.y);var s=Math.max(0,1-d/120);cx+=n.vx*s;cy+=n.vy*s;this.influence=Math.max(this.influence,s)}}this.x+=dx*0.04*(1-this.influence)+cx*this.influence;this.y+=dy*0.04*(1-this.influence)+cy*this.influence;this.influence*=0.99}else{this.vx+=(Math.random()-0.5)*0.4;this.vy+=(Math.random()-0.5)*0.4;this.vx*=0.95;this.vy*=0.95;this.x+=this.vx;this.y+=this.vy;if(this.x<w*0.5||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1;this.x=Math.max(w*0.5,Math.min(w,this.x));this.y=Math.max(0,Math.min(h,this.y))}};Particle.prototype.draw=function(ctx){var a=this.order?0.7-this.influence*0.4:0.7;var hex=Math.round(a*255).toString(16);if(hex.length<2)hex='0'+hex;ctx.fillStyle=color+hex;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill()};function init(){particles=[];var cols=Math.floor(w/35);var rows=Math.floor(h/35);if(cols<5)cols=5;if(rows<5)rows=5;var sx=w/cols;var sy=h/rows;for(var i=0;i<cols;i++){for(var j=0;j<rows;j++){var x=sx*i+sx/2;var y=sy*j+sy/2;var order=x<w*0.5;particles.push(new Particle(x,y,order))}}}function updateNeighbors(){for(var i=0;i<particles.length;i++){particles[i].neighbors=[];for(var j=0;j<particles.length;j++){if(i===j)continue;var d=Math.hypot(particles[i].x-particles[j].x,particles[i].y-particles[j].y);if(d<120)particles[i].neighbors.push(particles[j])}}}function animate(){ctx.clearRect(0,0,w,h);if(time%30===0)updateNeighbors();for(var i=0;i<particles.length;i++){var p=particles[i];p.update();p.draw(ctx);for(var j=0;j<p.neighbors.length;j++){var n=p.neighbors[j];var d=Math.hypot(p.x-n.x,p.y-n.y);if(d<60){var a=0.15*(1-d/60);var hex=Math.round(a*255).toString(16);if(hex.length<2)hex='0'+hex;ctx.strokeStyle=color+hex;ctx.lineWidth=0.5;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(n.x,n.y);ctx.stroke()}}}time++;animId=requestAnimationFrame(animate)}resize();window.addEventListener('resize',function(){cancelAnimationFrame(animId);resize();animate()});setTimeout(function(){resize();animate()},3000);animate()})();
 </script>
 </body>
 </html>
