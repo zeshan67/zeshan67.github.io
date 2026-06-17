@@ -8,28 +8,30 @@
 <title>Reframing Creative Learning · Interactive Framework</title>
 <style>
   :root{
-    --ink:#10243b;
-    --ink-2:#1b3a5c;
-    --ink-3:#4a627c;
-    --paper:#eef2f1;
-    --paper-2:#e3e9e8;
-    --line:#9fb2b8;
-    --line-soft:#c4d0d1;
-    --signal:#e0742d;
-    --signal-soft:#f3c79f;
-    --epi:#2d6e7e;
-    --ope:#3a7d5c;
-    --eth:#a8593a;
-    --ref:#6a5a8c;
-    --white:#fbfcfb;
-    --shadow:rgba(16,36,59,.16);
+    --ink:#1a1a18;
+    --ink-2:#3a3a36;
+    --ink-3:#6b6b64;
+    --paper:#f4f2ec;
+    --paper-2:#eae7df;
+    --line:#cbc7bd;
+    --line-soft:#ddd9cf;
+    --signal:#1a1a18;
+    --signal-soft:#9a9890;
+    --hl:#ffde21;
+    --hl-ink:#1a1a18;
+    --epi:#3f5f66;
+    --ope:#4d6149;
+    --eth:#8a5a44;
+    --ref:#5a5470;
+    --white:#fbfaf6;
+    --shadow:rgba(26,26,24,.12);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     background:
-      linear-gradient(rgba(16,36,59,.025) 1px,transparent 1px) 0 0/26px 26px,
-      linear-gradient(90deg,rgba(16,36,59,.025) 1px,transparent 1px) 0 0/26px 26px,
+      linear-gradient(rgba(26,26,24,.03) 1px,transparent 1px) 0 0/26px 26px,
+      linear-gradient(90deg,rgba(26,26,24,.03) 1px,transparent 1px) 0 0/26px 26px,
       var(--paper);
     color:var(--ink);
     font-family:"Helvetica Neue",Arial,sans-serif;
@@ -45,16 +47,18 @@
   h1 em{font-style:italic;color:var(--signal)}
   .sub{max-width:640px;margin:18px auto 0;font-size:15.5px;color:var(--ink-2)}
   .byline{margin-top:16px;font-size:13px;letter-spacing:.02em;color:var(--ink-2)}
-  .byline a{color:var(--signal);text-decoration:none;font-weight:600}
-  .byline a:hover{text-decoration:underline}
+  .byline a{color:var(--ink);text-decoration:none;font-weight:600;box-shadow:inset 0 -0.5em 0 var(--hl);transition:box-shadow .2s}
+  .byline a:hover{box-shadow:inset 0 -0.85em 0 var(--hl)}
   .affil{margin-top:6px;font-size:12px;color:var(--ink-3);line-height:1.5}
   .venue{margin-top:10px;font-size:11.5px;letter-spacing:.04em;color:var(--ink-3);font-style:italic}
+  .venue a{color:var(--ink-2);text-decoration:underline;text-underline-offset:2px;font-style:italic}
+  .venue a:hover{color:var(--ink)}
 
   /* ---------- mode toggle ---------- */
   .modes{display:flex;justify-content:center;gap:0;margin:30px auto 8px;border:1px solid var(--ink);border-radius:2px;width:max-content;max-width:100%;overflow:hidden;background:var(--white)}
   .modes button{font-family:inherit;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:11px 20px;border:0;background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
   .modes button+button{border-left:1px solid var(--line-soft)}
-  .modes button.on{background:var(--ink);color:var(--paper)}
+  .modes button.on{background:var(--hl);color:var(--hl-ink)}
   .hint{text-align:center;font-size:12.5px;color:var(--ink-2);opacity:.85;margin:4px 0 0;min-height:18px}
 
   /* ---------- explore stage ---------- */
@@ -113,7 +117,7 @@
   .panel .ptag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;font-weight:700;margin-bottom:8px}
   .panel h3{font-family:Georgia,serif;font-weight:400;font-size:23px;margin-bottom:9px;color:var(--white);display:flex;align-items:center;gap:11px}
   .panel h3 .gm{width:28px;height:28px;flex:0 0 auto}
-  .panel p{font-size:14.5px;line-height:1.55;color:#cdd9e2;max-width:64ch}
+  .panel p{font-size:14.5px;line-height:1.55;color:#d8d4ca;max-width:64ch}
   .panel .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
   .chip{font-size:10.5px;letter-spacing:.04em;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px 11px;color:#dbe6ee}
   .chip b{color:var(--signal-soft);font-weight:700}
@@ -172,6 +176,9 @@
   footer{margin:40px 0 30px;text-align:center;border-top:1px solid var(--line-soft);padding-top:20px}
   footer p{font-size:12px;color:var(--ink-2);opacity:.85;line-height:1.65}
   footer a{color:var(--signal);text-decoration:none}
+  .cite-btn{display:inline-block;margin-top:16px;font-family:inherit;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    color:var(--hl-ink);background:var(--hl);border:1.5px solid var(--hl);border-radius:2px;padding:10px 22px;text-decoration:none;transition:background .2s,color .2s,box-shadow .2s}
+  .cite-btn:hover{background:var(--hl-ink);color:var(--hl);border-color:var(--hl-ink)}
   footer a:hover{text-decoration:underline}
 
   @media (max-width:860px){
@@ -198,12 +205,12 @@
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Conceptual Framework · iConference 2026</div>
+    <div class="eyebrow">Conference Paper</div>
     <h1>Reframing creative learning:<br>design literacy in the <em>GenAI era</em></h1>
     <p class="sub">A design task moves through four planes of judgment, drawing on nine action components, so that curiosity, iteration, and originality hold their ground when generative AI enters the studio.</p>
-    <p class="byline">Asif Hasan Zeshan &amp; <a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener">Xiao Hu, PhD</a></p>
+    <p class="byline"><a href="https://infosci.arizona.edu/person/asif-hasan-zeshan" target="_blank" rel="noopener">Asif Hasan Zeshan</a> &amp; <a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener">Xiao Hu, PhD</a></p>
     <p class="affil">University of Arizona, College of Information Science</p>
-    <p class="venue">Presented at iConference 2026, hosted by Edinburgh Napier University</p>
+    <p class="venue">Presented at <a href="https://www.ischools.org/post/iconference-2026-call-for-papers" target="_blank" rel="noopener">iConference 2026</a>, hosted by Edinburgh Napier University</p>
   </header>
 
   <div class="modes" role="tablist" aria-label="View mode">
@@ -217,9 +224,10 @@
   <section class="stage" id="overviewView">
     <div class="overview">
       <div class="ov-text">
-        <p>Generative AI now sits inside creative learning, speeding up ideation and widening access while introducing unreliable information, thinner originality, and ethical grey areas. This framework reframes <strong>design literacy as an information practice</strong>: a way to keep curiosity, iteration, and originality intact while guarding against misinformation, bias, and overreliance on AI.</p>
-        <p>It works across the whole learning ecosystem, in <strong>formal</strong> classrooms, <strong>non-formal</strong> settings such as galleries, libraries, archives, and museums, and <strong>informal</strong> self-directed practice. A design task passes through four <strong>judgment planes</strong>, epistemic, operational, ethical-legal, and reflective, drawing on nine <strong>action components</strong> that re-cluster to fit each task. The diagram below maps how these layers connect, from the design task and GenAI mediation at the base up to sustained design literacy at the top.</p>
-        <p class="ov-cue">Open the <strong>Explore</strong> tab to interact with the planes and components, or <strong>Walkthrough</strong> to follow one architectural design task through all four planes.</p>
+        <p>Generative AI has moved quickly into educational and creative design practice, accelerating ideation and widening access to tools and references. Yet the same systems introduce epistemic unreliability, thinner originality, and ethical ambiguity, unsettling the information practices on which creative learning has long depended. This framework responds by reframing design literacy as an information practice: a disciplined way to preserve curiosity, iteration, and originality while guarding against misinformation, bias, and overreliance on AI.</p>
+        <p>The scope spans the whole learning ecosystem. It addresses formal settings such as schools and university studios, non-formal contexts including galleries, libraries, archives, and museums, and informal, self-directed creativity in everyday life. Across all three, a design task is examined through four judgment planes, epistemic, operational, ethical-legal, and reflective, each representing a distinct mode of judgment a learner brings to bear when working with generative AI.</p>
+        <p>Operating within and across these planes are nine action components, recurring evaluative and reflective criteria that re-cluster to fit the demands of a given task rather than binding to a single plane. Together they let educators and learners locate where creative judgment is exercised, where information is evaluated, and where accountability is owed. The diagram below maps how these layers connect, rising from the design task and GenAI mediation at the base, through the four planes and their components, to sustained design literacy at the top.</p>
+        <p class="ov-cue">Open the Explore tab to interact with the planes and components, or Walkthrough to follow one architectural design task through all four planes.</p>
       </div>
       <figure class="ov-fig">
         <img id="ovImg" alt="Conceptual framework diagram: learning ecosystem and GenAI mediation at the base, rising through epistemic, operational, ethical-legal, and reflective judgment planes with their action components, to sustained design literacy at the top."/>
@@ -271,9 +279,10 @@
 
   <footer>
     <p><strong>Reframing creative learning: a conceptual framework for design literacy in the GenAI era</strong><br>
-    Asif Hasan Zeshan &amp; <a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener">Xiao Hu, PhD</a> · University of Arizona, College of Information Science<br>
+    <a href="https://infosci.arizona.edu/person/asif-hasan-zeshan" target="_blank" rel="noopener">Asif Hasan Zeshan</a> &amp; <a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener">Xiao Hu, PhD</a> · University of Arizona, College of Information Science<br>
     Presented at iConference 2026, Edinburgh Napier University · <em>Information Research</em>, 31(iConf), 317–327<br>
     <a href="https://doi.org/10.47989/ir31iConf64273" target="_blank" rel="noopener">doi.org/10.47989/ir31iConf64273</a></p>
+    <a class="cite-btn" href="https://publicera.kb.se/ir/article/view/64273" target="_blank" rel="noopener">Cite the paper</a>
   </footer>
 </div>
 
@@ -480,61 +489,61 @@
   /* ================= WALKTHROUGH VISUALS (SVG, after Figure 3) ================= */
   function VIZ_BRIEF(){return '\
 <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif">\
-<rect x="0.5" y="0.5" width="359" height="299" fill="#fbfcfb" stroke="#c4d0d1"/>\
-<g stroke="#10243b" fill="none" stroke-width="1.4">\
+<rect x="0.5" y="0.5" width="359" height="299" fill="#fbfaf6" stroke="#ddd9cf"/>\
+<g stroke="#1a1a18" fill="none" stroke-width="1.4">\
 <rect x="40" y="60" width="280" height="180"/>\
 <line x1="180" y1="60" x2="180" y2="240"/>\
 <rect x="40" y="60" width="140" height="95"/>\
 <rect x="180" y="60" width="140" height="95"/>\
 <path d="M40 200h60v40" /><path d="M320 200h-60v40"/>\
 </g>\
-<g fill="#10243b" font-size="9" letter-spacing=".06em">\
+<g fill="#1a1a18" font-size="9" letter-spacing=".06em">\
 <text x="95" y="112" text-anchor="middle">BED 1</text>\
 <text x="250" y="112" text-anchor="middle">BED 2</text>\
 <text x="125" y="225" text-anchor="middle">LIVING</text>\
 <text x="235" y="225" text-anchor="middle">KITCHEN</text>\
 </g>\
-<g stroke="#e0742d" stroke-width="1.2" fill="none">\
+<g stroke="#8a5a44" stroke-width="1.2" fill="none">\
 <path d="M30 30l18 18M48 30l-18 18" opacity=".0"/>\
 <circle cx="330" cy="40" r="13"/><path d="M330 22v-7M330 65v-7M348 40h7M305 40h7M343 27l5-5M312 53l-5 5M343 53l5 5M312 27l-5-5"/>\
 </g>\
-<text x="330" y="44" text-anchor="middle" font-size="9" fill="#e0742d" font-weight="700">N</text>\
-<text x="50" y="48" font-size="9.5" fill="#1b3a5c" letter-spacing=".14em">BRIEF · 2-BED, ARID SW US</text>\
-<g stroke="#9fb2b8" stroke-width="1" fill="none">\
+<text x="330" y="44" text-anchor="middle" font-size="9" fill="#8a5a44" font-weight="700">N</text>\
+<text x="50" y="48" font-size="9.5" fill="#3a3a36" letter-spacing=".14em">BRIEF · 2-BED, ARID SW US</text>\
+<g stroke="#cbc7bd" stroke-width="1" fill="none">\
 <path d="M40 255h280M40 251v8M320 251v8"/></g>\
-<text x="180" y="272" text-anchor="middle" font-size="8.5" fill="#4a627c" letter-spacing=".1em">LEARNER SETS INTENT · AI GENERATES OPTIONS</text>\
+<text x="180" y="272" text-anchor="middle" font-size="8.5" fill="#6b6b64" letter-spacing=".1em">LEARNER SETS INTENT · AI GENERATES OPTIONS</text>\
 </svg>';}
 
   function VIZ_EPI(){return '\
 <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif">\
-<rect x="0.5" y="0.5" width="359" height="299" fill="#fbfcfb" stroke="#c4d0d1"/>\
-<text x="18" y="26" font-size="9.5" fill="#2d6e7e" font-weight="700" letter-spacing=".14em">PROVENANCE · WHERE DID THIS COME FROM?</text>\
-<g stroke="#2d6e7e" stroke-width="1.1">\
+<rect x="0.5" y="0.5" width="359" height="299" fill="#fbfaf6" stroke="#ddd9cf"/>\
+<text x="18" y="26" font-size="9.5" fill="#3f5f66" font-weight="700" letter-spacing=".14em">PROVENANCE · WHERE DID THIS COME FROM?</text>\
+<g stroke="#3f5f66" stroke-width="1.1">\
 <line x1="180" y1="70" x2="110" y2="120"/><line x1="180" y1="70" x2="250" y2="115"/>\
 <line x1="180" y1="70" x2="150" y2="40"/><line x1="110" y1="120" x2="70" y2="160"/>\
 <line x1="110" y1="120" x2="140" y2="170"/><line x1="250" y1="115" x2="290" y2="160"/>\
 <line x1="250" y1="115" x2="225" y2="165"/></g>\
 <g>\
-<circle cx="180" cy="70" r="13" fill="#2d6e7e"/><circle cx="150" cy="40" r="7" fill="#7fb0b8"/>\
-<circle cx="110" cy="120" r="9" fill="#4f93a0"/><circle cx="250" cy="115" r="9" fill="#4f93a0"/>\
-<circle cx="70" cy="160" r="6" fill="#a7cdd3"/><circle cx="140" cy="170" r="6" fill="#a7cdd3"/>\
-<circle cx="290" cy="160" r="6" fill="#a7cdd3"/><circle cx="225" cy="165" r="6" fill="#a7cdd3"/></g>\
+<circle cx="180" cy="70" r="13" fill="#3f5f66"/><circle cx="150" cy="40" r="7" fill="#9fb3b0"/>\
+<circle cx="110" cy="120" r="9" fill="#6f8c8f"/><circle cx="250" cy="115" r="9" fill="#6f8c8f"/>\
+<circle cx="70" cy="160" r="6" fill="#c2cecb"/><circle cx="140" cy="170" r="6" fill="#c2cecb"/>\
+<circle cx="290" cy="160" r="6" fill="#c2cecb"/><circle cx="225" cy="165" r="6" fill="#c2cecb"/></g>\
 <text x="180" y="73" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">OUT</text>\
-<g font-size="7.5" fill="#1b3a5c"><text x="110" y="138" text-anchor="middle">source</text><text x="250" y="133" text-anchor="middle">dataset</text></g>\
-<rect x="40" y="200" width="120" height="70" fill="none" stroke="#10243b" stroke-width="1.2"/>\
-<line x1="100" y1="200" x2="100" y2="270" stroke="#10243b"/><line x1="40" y1="235" x2="160" y2="235" stroke="#10243b" stroke-dasharray="3 3"/>\
-<text x="100" y="192" text-anchor="middle" font-size="8" fill="#1b3a5c">recall: ergonomic plan</text>\
-<g><rect x="195" y="200" width="125" height="70" fill="#fff" stroke="#10243b" stroke-width="1.2"/>\
-<rect x="205" y="210" width="35" height="22" fill="#e6f0f1" stroke="#2d6e7e"/><rect x="205" y="238" width="50" height="24" fill="#fdf0e6" stroke="#e0742d"/>\
-<text x="257" y="226" font-size="7.5" fill="#1b3a5c">uncertainty</text><text x="262" y="252" font-size="7.5" fill="#b4471f" font-weight="700">tagged ?</text></g>\
-<text x="195" y="290" font-size="8" fill="#4a627c">plausibility check against desert facts</text>\
+<g font-size="7.5" fill="#3a3a36"><text x="110" y="138" text-anchor="middle">source</text><text x="250" y="133" text-anchor="middle">dataset</text></g>\
+<rect x="40" y="200" width="120" height="70" fill="none" stroke="#1a1a18" stroke-width="1.2"/>\
+<line x1="100" y1="200" x2="100" y2="270" stroke="#1a1a18"/><line x1="40" y1="235" x2="160" y2="235" stroke="#1a1a18" stroke-dasharray="3 3"/>\
+<text x="100" y="192" text-anchor="middle" font-size="8" fill="#3a3a36">recall: ergonomic plan</text>\
+<g><rect x="195" y="200" width="125" height="70" fill="#fff" stroke="#1a1a18" stroke-width="1.2"/>\
+<rect x="205" y="210" width="35" height="22" fill="#e7e9e6" stroke="#3f5f66"/><rect x="205" y="238" width="50" height="24" fill="#fdf0e6" stroke="#8a5a44"/>\
+<text x="257" y="226" font-size="7.5" fill="#3a3a36">uncertainty</text><text x="262" y="252" font-size="7.5" fill="#8a5a44" font-weight="700">tagged ?</text></g>\
+<text x="195" y="290" font-size="8" fill="#6b6b64">plausibility check against desert facts</text>\
 </svg>';}
 
-  function VIZ_ETH(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfcfb" stroke="#c4d0d1"/> <text x="20" y="28" font-size="10" fill="#a8593a" font-weight="700" letter-spacing=".14em">BIAS &amp; HARM REVIEW</text> <!-- Existing homes layout --> <text x="92" y="52" text-anchor="middle" font-size="9" fill="#1b3a5c" letter-spacing=".04em">EXISTING HOMES NEARBY</text> <g stroke="#7d7768" stroke-width="1.4" fill="none"> <rect x="28" y="62" width="128" height="92"/> <line x1="92" y1="62" x2="92" y2="154"/> <line x1="28" y1="110" x2="92" y2="110"/> <line x1="92" y1="100" x2="156" y2="100"/> <!-- door swings --> <path d="M60 110a14 14 0 0 1 14-14" stroke="#b6ac97" stroke-width="1"/> <path d="M124 100a13 13 0 0 1 13 13" stroke="#b6ac97" stroke-width="1"/> </g> <g fill="#7d7768" font-size="7.5"> <text x="60" y="90" text-anchor="middle">BED</text> <text x="60" y="135" text-anchor="middle">BED</text> <text x="124" y="84" text-anchor="middle">LIVING</text> <text x="124" y="132" text-anchor="middle">KIT</text> </g> <!-- AI generated layout, dashed --> <text x="268" y="52" text-anchor="middle" font-size="9" fill="#a8593a" letter-spacing=".04em">AI-GENERATED LAYOUT</text> <g stroke="#a8593a" stroke-width="1.4" fill="none" stroke-dasharray="5 3"> <rect x="204" y="62" width="128" height="92"/> <line x1="268" y1="62" x2="268" y2="154"/> <line x1="204" y1="106" x2="268" y2="106"/> <line x1="268" y1="96" x2="332" y2="96"/> </g> <g fill="#a8593a" font-size="7.5"> <text x="236" y="88" text-anchor="middle">BED</text> <text x="236" y="134" text-anchor="middle">BED</text> <text x="300" y="82" text-anchor="middle">LIVING</text> <text x="300" y="128" text-anchor="middle">KIT</text> </g> <!-- compare bracket --> <path d="M168 108h24M180 100v16" stroke="#e0742d" stroke-width="1.2" fill="none"/> <text x="180" y="95" text-anchor="middle" font-size="8" fill="#e0742d" font-weight="700">vs</text> <!-- review questions --> <g font-size="8.5" fill="#1b3a5c"> <circle cx="32" cy="186" r="2.2" fill="#a8593a"/><text x="40" y="189">Culturally invasive?</text> <circle cx="32" cy="204" r="2.2" fill="#a8593a"/><text x="40" y="207">Equitable and sustainable?</text> <circle cx="32" cy="222" r="2.2" fill="#a8593a"/><text x="40" y="225">Merely copied from context?</text> </g> <!-- authorship disclosure card --> <rect x="24" y="244" width="312" height="60" rx="2" fill="#fdf3ec" stroke="#e0742d" stroke-width="1.3"/> <text x="36" y="262" font-size="9" fill="#b4471f" font-weight="700" letter-spacing=".1em">AUTHORSHIP DISCLOSURE</text> <line x1="36" y1="270" x2="324" y2="270" stroke="#f3c79f" stroke-width="1"/> <g font-size="8" fill="#1b3a5c"> <text x="36" y="285">AI-assisted: layout drafts and variants</text> <text x="36" y="298">Human: site logic, codes, and the final call</text> </g> </svg>';}
+  function VIZ_ETH(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfaf6" stroke="#ddd9cf"/> <text x="20" y="28" font-size="10" fill="#8a5a44" font-weight="700" letter-spacing=".14em">BIAS &amp; HARM REVIEW</text> <!-- Existing homes layout --> <text x="92" y="52" text-anchor="middle" font-size="9" fill="#3a3a36" letter-spacing=".04em">EXISTING HOMES NEARBY</text> <g stroke="#6b6b64" stroke-width="1.4" fill="none"> <rect x="28" y="62" width="128" height="92"/> <line x1="92" y1="62" x2="92" y2="154"/> <line x1="28" y1="110" x2="92" y2="110"/> <line x1="92" y1="100" x2="156" y2="100"/> <!-- door swings --> <path d="M60 110a14 14 0 0 1 14-14" stroke="#cbc7bd" stroke-width="1"/> <path d="M124 100a13 13 0 0 1 13 13" stroke="#cbc7bd" stroke-width="1"/> </g> <g fill="#6b6b64" font-size="7.5"> <text x="60" y="90" text-anchor="middle">BED</text> <text x="60" y="135" text-anchor="middle">BED</text> <text x="124" y="84" text-anchor="middle">LIVING</text> <text x="124" y="132" text-anchor="middle">KIT</text> </g> <!-- AI generated layout, dashed --> <text x="268" y="52" text-anchor="middle" font-size="9" fill="#8a5a44" letter-spacing=".04em">AI-GENERATED LAYOUT</text> <g stroke="#8a5a44" stroke-width="1.4" fill="none" stroke-dasharray="5 3"> <rect x="204" y="62" width="128" height="92"/> <line x1="268" y1="62" x2="268" y2="154"/> <line x1="204" y1="106" x2="268" y2="106"/> <line x1="268" y1="96" x2="332" y2="96"/> </g> <g fill="#8a5a44" font-size="7.5"> <text x="236" y="88" text-anchor="middle">BED</text> <text x="236" y="134" text-anchor="middle">BED</text> <text x="300" y="82" text-anchor="middle">LIVING</text> <text x="300" y="128" text-anchor="middle">KIT</text> </g> <!-- compare bracket --> <path d="M168 108h24M180 100v16" stroke="#8a5a44" stroke-width="1.2" fill="none"/> <text x="180" y="95" text-anchor="middle" font-size="8" fill="#8a5a44" font-weight="700">vs</text> <!-- review questions --> <g font-size="8.5" fill="#3a3a36"> <circle cx="32" cy="186" r="2.2" fill="#8a5a44"/><text x="40" y="189">Culturally invasive?</text> <circle cx="32" cy="204" r="2.2" fill="#8a5a44"/><text x="40" y="207">Equitable and sustainable?</text> <circle cx="32" cy="222" r="2.2" fill="#8a5a44"/><text x="40" y="225">Merely copied from context?</text> </g> <!-- authorship disclosure card --> <rect x="24" y="244" width="312" height="60" rx="2" fill="#efe9e2" stroke="#8a5a44" stroke-width="1.3"/> <text x="36" y="262" font-size="9" fill="#8a5a44" font-weight="700" letter-spacing=".1em">AUTHORSHIP DISCLOSURE</text> <line x1="36" y1="270" x2="324" y2="270" stroke="#cbb9a8" stroke-width="1"/> <g font-size="8" fill="#3a3a36"> <text x="36" y="285">AI-assisted: layout drafts and variants</text> <text x="36" y="298">Human: site logic, codes, and the final call</text> </g> </svg>';}
 
-  function VIZ_REF(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfcfb" stroke="#c4d0d1"/> <text x="20" y="28" font-size="10" fill="#6a5a8c" font-weight="700" letter-spacing=".14em">REFLECTIVE CRITIQUE · THE WHY</text> <!-- semicircular arc, four metacognition stops --> <!-- arc center (180,210), radius 130, upper half --> <path d="M50 210 A130 130 0 0 1 310 210" fill="none" stroke="#cdc4b0" stroke-width="2" stroke-dasharray="2 5"/> <!-- progress arc up to last node (animated feel via gradient dashes) --> <path d="M50 210 A130 130 0 0 1 310 210" fill="none" stroke="#6a5a8c" stroke-width="2" stroke-dasharray="6 6" opacity=".5"/> <!-- nodes along the arc at angles 180,135,90,45,0 --> <!-- compute: x=180+130*cos, y=210-130*sin --> <!-- 180deg -> (50,210); 135 -> (88,118); 90 -> (180,80); 45 ->(272,118); 0 ->(310,210) --> <!-- node 1 --> <g> <circle cx="50" cy="210" r="13" fill="#6a5a8c"/> <text x="50" y="214" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1</text> <text x="50" y="240" text-anchor="middle" font-size="8" fill="#1b3a5c">Why accept</text> <text x="50" y="251" text-anchor="middle" font-size="8" fill="#1b3a5c">this iteration?</text> </g> <!-- node 2 --> <g> <circle cx="88" cy="118" r="12" fill="#8073a3"/> <text x="88" y="122" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2</text> <text x="88" y="92" text-anchor="middle" font-size="8" fill="#1b3a5c">Aligns with</text> <text x="88" y="101" text-anchor="middle" font-size="8" fill="#1b3a5c">ethics?</text> </g> <!-- node 3 --> <g> <circle cx="180" cy="80" r="12" fill="#8073a3"/> <text x="180" y="84" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">3</text> <text x="180" y="54" text-anchor="middle" font-size="8" fill="#1b3a5c">Meets</text> <text x="180" y="63" text-anchor="middle" font-size="8" fill="#1b3a5c">function?</text> </g> <!-- node 4 --> <g> <circle cx="272" cy="118" r="12" fill="#8073a3"/> <text x="272" y="122" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">4</text> <text x="272" y="92" text-anchor="middle" font-size="8" fill="#1b3a5c">What shaped</text> <text x="272" y="101" text-anchor="middle" font-size="8" fill="#1b3a5c">my prompts?</text> </g> <!-- endpoint arrow --> <g> <circle cx="310" cy="210" r="9" fill="#e0742d"/> <path d="M306 206l8 4-8 4" fill="none" stroke="#fff" stroke-width="1.4"/> <text x="310" y="234" text-anchor="middle" font-size="8" fill="#b4471f" font-weight="700">insight</text> </g> <!-- direction hint --> <text x="180" y="150" text-anchor="middle" font-size="8.5" fill="#6a5a8c" font-style="italic">step by step around the question</text> <!-- metacognition base --> <rect x="40" y="268" width="280" height="40" rx="2" fill="#f1eef6" stroke="#6a5a8c" stroke-width="1.2"/> <text x="180" y="285" text-anchor="middle" font-size="9" fill="#6a5a8c" font-weight="700" letter-spacing=".08em">METACOGNITION</text> <text x="180" y="299" text-anchor="middle" font-size="8" fill="#1b3a5c">process · parameters · the learner\'s own role</text> </svg>';}
+  function VIZ_REF(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfaf6" stroke="#ddd9cf"/> <text x="20" y="28" font-size="10" fill="#5a5470" font-weight="700" letter-spacing=".14em">REFLECTIVE CRITIQUE · THE WHY</text> <!-- semicircular arc, four metacognition stops --> <!-- arc center (180,210), radius 130, upper half --> <path d="M50 210 A130 130 0 0 1 310 210" fill="none" stroke="#ddd9cf" stroke-width="2" stroke-dasharray="2 5"/> <!-- progress arc up to last node (animated feel via gradient dashes) --> <path d="M50 210 A130 130 0 0 1 310 210" fill="none" stroke="#5a5470" stroke-width="2" stroke-dasharray="6 6" opacity=".5"/> <!-- nodes along the arc at angles 180,135,90,45,0 --> <!-- compute: x=180+130*cos, y=210-130*sin --> <!-- 180deg -> (50,210); 135 -> (88,118); 90 -> (180,80); 45 ->(272,118); 0 ->(310,210) --> <!-- node 1 --> <g> <circle cx="50" cy="210" r="13" fill="#5a5470"/> <text x="50" y="214" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1</text> <text x="50" y="240" text-anchor="middle" font-size="8" fill="#3a3a36">Why accept</text> <text x="50" y="251" text-anchor="middle" font-size="8" fill="#3a3a36">this iteration?</text> </g> <!-- node 2 --> <g> <circle cx="88" cy="118" r="12" fill="#736d88"/> <text x="88" y="122" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2</text> <text x="88" y="92" text-anchor="middle" font-size="8" fill="#3a3a36">Aligns with</text> <text x="88" y="101" text-anchor="middle" font-size="8" fill="#3a3a36">ethics?</text> </g> <!-- node 3 --> <g> <circle cx="180" cy="80" r="12" fill="#736d88"/> <text x="180" y="84" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">3</text> <text x="180" y="54" text-anchor="middle" font-size="8" fill="#3a3a36">Meets</text> <text x="180" y="63" text-anchor="middle" font-size="8" fill="#3a3a36">function?</text> </g> <!-- node 4 --> <g> <circle cx="272" cy="118" r="12" fill="#736d88"/> <text x="272" y="122" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">4</text> <text x="272" y="92" text-anchor="middle" font-size="8" fill="#3a3a36">What shaped</text> <text x="272" y="101" text-anchor="middle" font-size="8" fill="#3a3a36">my prompts?</text> </g> <!-- endpoint arrow --> <g> <circle cx="310" cy="210" r="9" fill="#8a5a44"/> <path d="M306 206l8 4-8 4" fill="none" stroke="#fff" stroke-width="1.4"/> <text x="310" y="234" text-anchor="middle" font-size="8" fill="#8a5a44" font-weight="700">insight</text> </g> <!-- direction hint --> <text x="180" y="150" text-anchor="middle" font-size="8.5" fill="#5a5470" font-style="italic">step by step around the question</text> <!-- metacognition base --> <rect x="40" y="268" width="280" height="40" rx="2" fill="#ecebef" stroke="#5a5470" stroke-width="1.2"/> <text x="180" y="285" text-anchor="middle" font-size="9" fill="#5a5470" font-weight="700" letter-spacing=".08em">METACOGNITION</text> <text x="180" y="299" text-anchor="middle" font-size="8" fill="#3a3a36">process · parameters · the learner\'s own role</text> </svg>';}
 
-  function VIZ_TRANSFER(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfcfb" stroke="#c4d0d1"/> <text x="20" y="26" font-size="10" fill="#e0742d" font-weight="700" letter-spacing=".12em">ONE FRAMEWORK · MANY DIRECTIONS</text> <!-- core --> <rect x="120" y="40" width="120" height="34" rx="2" fill="#10243b"/> <text x="180" y="58" text-anchor="middle" font-size="8.5" fill="#fff" font-weight="700">CREATIVE LEARNING</text> <text x="180" y="69" text-anchor="middle" font-size="7.5" fill="#cdd9e2">4 planes · 9 components</text> <!-- branch trunk --> <path d="M180 74v16" stroke="#9fb2b8" stroke-width="1.3" fill="none"/> <path d="M52 90h258" stroke="#9fb2b8" stroke-width="1.3" fill="none"/> <path d="M52 90v10M138 90v10M224 90v10M310 90v10" stroke="#9fb2b8" stroke-width="1.3" fill="none"/> <!-- four branches --> <g font-size="7.5" font-weight="700"> <rect x="12" y="100" width="80" height="24" rx="2" fill="#e6f0f1" stroke="#2d6e7e"/><text x="52" y="115" text-anchor="middle" fill="#1f5f6b">Empirical</text> <rect x="98" y="100" width="80" height="24" rx="2" fill="#e8f0e6" stroke="#3a7d5c"/><text x="138" y="115" text-anchor="middle" fill="#3a7d5c">Assessment</text> <rect x="184" y="100" width="80" height="24" rx="2" fill="#f4ece6" stroke="#a8593a"/><text x="224" y="115" text-anchor="middle" fill="#9a5a2a">Longitudinal</text> <rect x="270" y="100" width="80" height="24" rx="2" fill="#f1eef6" stroke="#6a5a8c"/><text x="310" y="115" text-anchor="middle" fill="#6a5a8c">Cross-disc.</text> </g> <!-- sub-items under each --> <g font-size="7" fill="#4a627c"> <text x="12" y="140">· Mixed-methods</text> <text x="12" y="152">· Experiments</text> <text x="12" y="164">· AI analytics</text> <text x="98" y="140">· Rubrics</text> <text x="98" y="152">· Portfolios</text> <text x="98" y="164">· Peer review</text> <text x="184" y="140">· Attitudes</text> <text x="184" y="152">· Self-efficacy</text> <text x="184" y="164">· Hybrid settings</text> <text x="270" y="140">· Industrial design</text> <text x="270" y="152">· HCI + arch.</text> <text x="270" y="164">· Film / music</text> </g> <!-- contexts band --> <text x="20" y="196" font-size="9" fill="#1b3a5c" font-weight="700" letter-spacing=".1em">ACROSS EVERY LEARNING CONTEXT</text> <g font-size="8"> <rect x="20" y="206" width="100" height="40" rx="2" fill="#fbfcfb" stroke="#2d6e7e" stroke-width="1.2"/> <text x="70" y="222" text-anchor="middle" fill="#1f5f6b" font-weight="700">FORMAL</text> <text x="70" y="235" text-anchor="middle" fill="#4a627c" font-size="7.5">school · university</text> <rect x="130" y="206" width="100" height="40" rx="2" fill="#fbfcfb" stroke="#3a7d5c" stroke-width="1.2"/> <text x="180" y="222" text-anchor="middle" fill="#3a7d5c" font-weight="700">NON-FORMAL</text> <text x="180" y="235" text-anchor="middle" fill="#4a627c" font-size="7.5">galleries · libraries · museums</text> <rect x="240" y="206" width="100" height="40" rx="2" fill="#fbfcfb" stroke="#6a5a8c" stroke-width="1.2"/> <text x="290" y="222" text-anchor="middle" fill="#6a5a8c" font-weight="700">INFORMAL</text> <text x="290" y="235" text-anchor="middle" fill="#4a627c" font-size="7.5">self-directed · everyday</text> </g> <!-- outcome --> <rect x="40" y="262" width="280" height="46" rx="2" fill="#fdf3ec" stroke="#e0742d" stroke-width="1.3"/> <text x="180" y="281" text-anchor="middle" font-size="9.5" fill="#b4471f" font-weight="700">CREATIVITY PRESERVED</text> <text x="180" y="297" text-anchor="middle" font-size="7.8" fill="#1b3a5c">curiosity, iteration, and originality, guarded from bias and overreliance</text> </svg>';}
+  function VIZ_TRANSFER(){return '<svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif"> <rect x="0.5" y="0.5" width="359" height="319" fill="#fbfaf6" stroke="#ddd9cf"/> <text x="20" y="26" font-size="10" fill="#8a5a44" font-weight="700" letter-spacing=".12em">ONE FRAMEWORK · MANY DIRECTIONS</text> <!-- core --> <rect x="120" y="40" width="120" height="34" rx="2" fill="#1a1a18"/> <text x="180" y="58" text-anchor="middle" font-size="8.5" fill="#fff" font-weight="700">CREATIVE LEARNING</text> <text x="180" y="69" text-anchor="middle" font-size="7.5" fill="#d8d4ca">4 planes · 9 components</text> <!-- branch trunk --> <path d="M180 74v16" stroke="#cbc7bd" stroke-width="1.3" fill="none"/> <path d="M52 90h258" stroke="#cbc7bd" stroke-width="1.3" fill="none"/> <path d="M52 90v10M138 90v10M224 90v10M310 90v10" stroke="#cbc7bd" stroke-width="1.3" fill="none"/> <!-- four branches --> <g font-size="7.5" font-weight="700"> <rect x="12" y="100" width="80" height="24" rx="2" fill="#e7e9e6" stroke="#3f5f66"/><text x="52" y="115" text-anchor="middle" fill="#3f5f66">Empirical</text> <rect x="98" y="100" width="80" height="24" rx="2" fill="#e8e9e4" stroke="#4d6149"/><text x="138" y="115" text-anchor="middle" fill="#4d6149">Assessment</text> <rect x="184" y="100" width="80" height="24" rx="2" fill="#efe9e2" stroke="#8a5a44"/><text x="224" y="115" text-anchor="middle" fill="#8a5a44">Longitudinal</text> <rect x="270" y="100" width="80" height="24" rx="2" fill="#ecebef" stroke="#5a5470"/><text x="310" y="115" text-anchor="middle" fill="#5a5470">Cross-disc.</text> </g> <!-- sub-items under each --> <g font-size="7" fill="#6b6b64"> <text x="12" y="140">· Mixed-methods</text> <text x="12" y="152">· Experiments</text> <text x="12" y="164">· AI analytics</text> <text x="98" y="140">· Rubrics</text> <text x="98" y="152">· Portfolios</text> <text x="98" y="164">· Peer review</text> <text x="184" y="140">· Attitudes</text> <text x="184" y="152">· Self-efficacy</text> <text x="184" y="164">· Hybrid settings</text> <text x="270" y="140">· Industrial design</text> <text x="270" y="152">· HCI + arch.</text> <text x="270" y="164">· Film / music</text> </g> <!-- contexts band --> <text x="20" y="196" font-size="9" fill="#3a3a36" font-weight="700" letter-spacing=".1em">ACROSS EVERY LEARNING CONTEXT</text> <g font-size="8"> <rect x="20" y="206" width="100" height="40" rx="2" fill="#fbfaf6" stroke="#3f5f66" stroke-width="1.2"/> <text x="70" y="222" text-anchor="middle" fill="#3f5f66" font-weight="700">FORMAL</text> <text x="70" y="235" text-anchor="middle" fill="#6b6b64" font-size="7.5">school · university</text> <rect x="130" y="206" width="100" height="40" rx="2" fill="#fbfaf6" stroke="#4d6149" stroke-width="1.2"/> <text x="180" y="222" text-anchor="middle" fill="#4d6149" font-weight="700">NON-FORMAL</text> <text x="180" y="235" text-anchor="middle" fill="#6b6b64" font-size="7.5">galleries · libraries · museums</text> <rect x="240" y="206" width="100" height="40" rx="2" fill="#fbfaf6" stroke="#5a5470" stroke-width="1.2"/> <text x="290" y="222" text-anchor="middle" fill="#5a5470" font-weight="700">INFORMAL</text> <text x="290" y="235" text-anchor="middle" fill="#6b6b64" font-size="7.5">self-directed · everyday</text> </g> <!-- outcome --> <rect x="40" y="262" width="280" height="46" rx="2" fill="#efe9e2" stroke="#8a5a44" stroke-width="1.3"/> <text x="180" y="281" text-anchor="middle" font-size="9.5" fill="#8a5a44" font-weight="700">CREATIVITY PRESERVED</text> <text x="180" y="297" text-anchor="middle" font-size="7.8" fill="#3a3a36">curiosity, iteration, and originality, guarded from bias and overreliance</text> </svg>';}
 
   var SCENES=[
     {k:"Brief · Task allocation",g:"signal",t:"Design a desert home with AI in the room",
