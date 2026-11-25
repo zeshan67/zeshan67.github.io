@@ -167,7 +167,7 @@
         range.selectNodeContents(el);
         add(range.getBoundingClientRect(), 22);
       });
-      document.querySelectorAll(".hero-actions, .slip, .section, .contact").forEach(function (el) { add(el.getBoundingClientRect(), 22); });
+      document.querySelectorAll(".hero-actions, .slip, .section, .contact, [data-keep-clear]").forEach(function (el) { add(el.getBoundingClientRect(), 22); });
       var reels = document.querySelectorAll(".reel");
       if (reels.length) {
         var top = Infinity, bottom = -Infinity;
