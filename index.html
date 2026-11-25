@@ -1,300 +1,218 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-							<style>
-								body {
-									background-color: white; /* Ensure the iframe has a white background */
-								}
-
-								
-							</style>
-                        </head>
-                        <body>
-                            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asif Hasan Zeshan — Design Intelligence × Creative Learning × Synthetic Cognition</title>
-<meta name="description" content="Asif Hasan Zeshan — PhD Student at the University of Arizona researching Design Intelligence, Creative Learning, and Synthetic Cognition.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asif Hasan Zeshan — Design Intelligence, Creative Learning, Synthetic Cognition</title>
+<meta name="description" content="Asif Hasan Zeshan is a PhD student at the University of Arizona researching design intelligence, creative learning and synthetic cognition. Research, design work and news.">
 <meta name="author" content="Asif Hasan Zeshan">
-<meta property="og:title" content="Asif Hasan Zeshan">
-<meta property="og:description" content="Design Intelligence × Creative Learning × Synthetic Cognition">
+<meta name="theme-color" content="#F5F2F0">
+<link rel="canonical" href="https://www.asifhasanzeshan.xyz/">
+<meta property="og:title" content="Asif Hasan Zeshan — Design Intelligence, Creative Learning, Synthetic Cognition">
+<meta property="og:description" content="Architecture-trained PhD student in information science at the University of Arizona. Research, design work and news.">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F5F2F0;--ink:#1A1A1A;--accent:#FFDE21;--accent-deep:#E0BC00;--signal:#CC3100;--muted:#636359;--ghost:#E8E8DF}
-html,body{margin:0;padding:0;width:100%;background:var(--bg);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-#entropy-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.1}
-.landing-overlay{position:fixed;inset:0;z-index:2000;background:var(--ink);display:flex;align-items:flex-end;justify-content:flex-start;padding:8% 6%;animation:overlayKill .01s linear 1.4s forwards}
-.landing-overlay::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--ink);animation:overlayWipe .45s cubic-bezier(.77,0,.175,1) 1.05s forwards;transform-origin:top;z-index:1}
-@keyframes overlayWipe{0%{transform:scaleY(1)}to{transform:scaleY(0)}}
-@keyframes overlayKill{to{visibility:hidden;pointer-events:none;z-index:-1}}
-.landing-inner{position:relative;z-index:2}
-.landing-name{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(1.8rem,5vw,3.8rem);color:var(--bg);line-height:.95;letter-spacing:-.03em;opacity:0;animation:landIn .35s cubic-bezier(.16,1,.3,1) .1s forwards}
-.landing-name .accent-dot{color:var(--accent)}
-.landing-rule{width:0;height:3px;background:var(--accent);margin-top:12px;animation:ruleGrow .35s cubic-bezier(.16,1,.3,1) .3s forwards}
-.landing-sub{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.75rem,1.8vw,1.17rem);color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-top:10px;opacity:0;animation:landIn .3s ease-out .5s forwards}
-@keyframes landIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes ruleGrow{from{width:0}to{width:clamp(60px,12%,140px)}}
-.hero{position:relative;z-index:1;width:100%;min-height:100vh;min-height:100dvh;background:transparent;display:flex;align-items:center;overflow:hidden;opacity:0;animation:heroIn .5s ease-out 1.3s forwards;padding-top:clamp(20px,4%,60px);padding-bottom:clamp(16px,3%,40px)}
-@keyframes heroIn{from{opacity:0}to{opacity:1}}
-.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-bg .ghost-letter{position:absolute;right:-3%;top:-8%;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(16rem,50vw,55rem);line-height:.8;color:transparent;-webkit-text-stroke:1.2px var(--ghost);opacity:.45;user-select:none;animation:ghostDrift 25s ease-in-out infinite}
-@keyframes ghostDrift{0%,to{transform:translate(0,0) rotate(0)}50%{transform:translate(-8px,5px) rotate(-.3deg)}}
-.hero-bg .accent-bar{position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent);animation:barSlide .4s cubic-bezier(.16,1,.3,1) 1.4s both;transform-origin:top}
-@keyframes barSlide{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.hero-bg .dot-grid{position:absolute;inset:0;background-image:radial-gradient(circle,var(--ghost) 1px,transparent 1px);background-size:clamp(24px,3.5%,45px) clamp(24px,3.5%,45px);opacity:.5}
-.coord-mark{position:absolute;font-family:'Space Mono',monospace;font-size:14px;color:var(--muted);opacity:0;letter-spacing:.08em;animation:coordFade 2s ease-out forwards}
-.coord-mark.c1{top:12%;right:8%;animation-delay:2s}
-.coord-mark.c2{top:78%;right:22%;animation-delay:2.1s}
-.coord-mark.c3{bottom:15%;left:18%;animation-delay:2.2s}
-@keyframes coordFade{from{opacity:0}to{opacity:.2}}
-.float-shape{position:absolute;opacity:0}
-.float-shape.diamond{width:clamp(10px,1.5%,18px);height:clamp(10px,1.5%,18px);border:1.5px solid var(--accent-deep);transform:rotate(45deg);top:18%;right:15%;animation:shapeIn .5s ease-out 2.2s forwards,shapeFloatD 12s ease-in-out 2.7s infinite}
-.float-shape.circle-ring{width:clamp(22px,3%,40px);height:clamp(22px,3%,40px);border:1.5px solid var(--signal);border-radius:50%;bottom:22%;right:10%;animation:shapeIn .5s ease-out 2.3s forwards,shapeFloat 15s ease-in-out 2.8s infinite}
-.float-shape.cross-mark{top:60%;right:30%;width:clamp(14px,2%,22px);height:clamp(14px,2%,22px);animation:shapeIn .5s ease-out 2.4s forwards,shapeFloat 18s ease-in-out 2.9s infinite}
-.float-shape.cross-mark::before,.float-shape.cross-mark::after{content:'';position:absolute;background:var(--muted);top:50%;left:50%}
-.float-shape.cross-mark::before{width:100%;height:1.5px;transform:translate(-50%,-50%)}
-.float-shape.cross-mark::after{width:1.5px;height:100%;transform:translate(-50%,-50%)}
-@keyframes shapeIn{from{opacity:0;transform:scale(.5) rotate(45deg)}to{opacity:.3}}
-@keyframes shapeFloat{0%,to{transform:translate(0,0)}33%{transform:translate(-4px,6px)}66%{transform:translate(5px,-3px)}}
-@keyframes shapeFloatD{0%,to{transform:rotate(45deg) translate(0,0);opacity:.3}33%{transform:rotate(45deg) translate(-4px,6px);opacity:.2}66%{transform:rotate(45deg) translate(5px,-3px);opacity:.35}}
-.hero-content{position:relative;z-index:10;padding-left:clamp(22px,6%,90px);padding-right:10%;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(4px,.8vh,12px)}
-.page-index{font-family:'Space Mono',monospace;font-size:clamp(.63rem,1.5vw,.9rem);color:var(--muted);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-.page-index .idx-num{color:var(--signal);font-weight:700}
-.page-index .idx-dash{margin:0 4px;opacity:.4}
-.page-index .idx-label{font-weight:400}
-.hero-page-index{margin-bottom:clamp(6px,1.5vh,20px);opacity:0;animation:contentIn .4s ease-out 1.5s forwards}
-.hero-name{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2rem,6.5vw,5.5rem);color:var(--ink);line-height:1.05;letter-spacing:-.04em;margin-bottom:clamp(2px,.5vh,8px);opacity:0;animation:nameReveal .5s cubic-bezier(.16,1,.3,1) 1.65s forwards;position:relative;white-space:nowrap;width:100%}
-.hero-name .name-line{display:inline}
-.hero-name .name-line span{display:inline}
-.hero-name .name-first{opacity:0;animation:nameWordIn .4s cubic-bezier(.16,1,.3,1) 1.65s forwards}
-.hero-name .name-mid{opacity:0;animation:nameWordIn .4s cubic-bezier(.16,1,.3,1) 1.75s forwards}
-.hero-name .name-last{opacity:0;animation:nameWordIn .4s cubic-bezier(.16,1,.3,1) 1.85s forwards;color:var(--ink);position:relative;display:inline}
-@keyframes nameWordIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@keyframes nameReveal{from{opacity:0}to{opacity:1}}
-.hero-name .name-last::after{content:'';position:absolute;left:-4px;bottom:.18em;width:calc(100% + 8px);height:.2em;background:var(--accent);z-index:-1;transform:scaleX(0);transform-origin:left;animation:highlightSwipe .4s cubic-bezier(.16,1,.3,1) 2.15s forwards}
-@keyframes highlightSwipe{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes contentIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
-@keyframes sectionReveal{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
-.hero-tagline{display:flex;align-items:center;flex-wrap:nowrap;gap:clamp(5px,1.5%,14px);margin-top:clamp(4px,1vh,14px);opacity:0;animation:contentIn .4s ease-out 2.25s forwards;white-space:nowrap;width:100%}
-.tag-segment{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.5rem,1.6vw,1.1rem);color:var(--ink);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.spin-cross{width:clamp(10px,2.2vw,24px);height:clamp(10px,2.2vw,24px);position:relative;flex-shrink:0;animation:crossSpin 20s linear infinite}
-.spin-cross::before,.spin-cross::after{content:'';position:absolute;top:50%;left:50%;background:var(--signal)}
-.spin-cross::before{width:100%;height:2.5px;transform:translate(-50%,-50%)}
-.spin-cross::after{width:2.5px;height:100%;transform:translate(-50%,-50%)}
-.spin-cross .cross-ring{position:absolute;inset:-3px;border:1.5px solid var(--signal);border-radius:50%;opacity:.3;animation:ringPulse 3s ease-in-out infinite}
-.spin-cross:nth-of-type(2) .cross-ring{animation-delay:1.5s}
-@keyframes crossSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@keyframes ringPulse{0%,to{transform:scale(1);opacity:.2}50%{transform:scale(1.4);opacity:0}}
-.research-focus{margin-top:clamp(6px,1.5vh,18px);margin-bottom:clamp(6px,1.5vh,18px);width:100%;opacity:0;animation:contentIn .4s ease-out 2.4s forwards;position:relative;padding-left:clamp(12px,2%,22px)}
-.research-focus::before{content:'';position:absolute;left:0;top:4px;width:3px;height:calc(100% - 8px);background:var(--accent);opacity:0;animation:focusBarIn .35s ease-out 2.5s forwards}
-@keyframes focusBarIn{from{opacity:0;transform:scaleY(0)}to{opacity:1;transform:scaleY(1)}}
-.research-focus p{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.58rem,1.38vw,.94rem);color:var(--muted);line-height:1.7;letter-spacing:.02em;word-wrap:break-word;overflow-wrap:break-word}
-.research-focus p .highlight{font-weight:700;color:var(--ink);position:relative}
-.research-focus p .highlight::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:4px;background:var(--accent);opacity:.3;z-index:-1}
-.credentials-block{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin-bottom:clamp(6px,1.5vh,18px);width:100%;opacity:0;animation:contentIn .4s ease-out 2.6s forwards}
-.credential-primary{display:block;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.55rem,1.6vw,1.1rem);color:var(--ink);letter-spacing:.02em;line-height:1.35;text-decoration:none;position:relative;padding:clamp(3px,.5vh,8px) 0;transition:color .3s ease;word-wrap:break-word;overflow-wrap:break-word}
-.credential-primary .cred-label{display:inline;position:relative}
-.credential-primary .cred-label::after{content:'';position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.credential-primary:hover .cred-label::after{transform:scaleX(1)}
-.credential-primary .cred-arrow{display:inline-block;margin-left:8px;opacity:0;transform:translateX(-6px);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.credential-primary:hover .cred-arrow{opacity:1;transform:translateX(0)}
-.credential-primary .cred-arrow svg line,.credential-primary .cred-arrow svg polyline{stroke:var(--signal);stroke-width:2;stroke-linecap:square;fill:none}
-.credential-secondary{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);letter-spacing:.04em;line-height:1.4;text-decoration:none;position:relative;padding:clamp(1px,.3vh,5px) 0;transition:color .3s ease;word-wrap:break-word;overflow-wrap:break-word}
-.credential-secondary .cred-text{display:inline;position:relative;transition:color .3s ease}
-.credential-secondary .cred-text::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.credential-secondary:hover .cred-text::after{transform:scaleX(1)}
-.credential-secondary:hover .cred-text{color:var(--ink)}
-.credential-secondary .cred-arrow-sm{display:inline-block;margin-left:6px;opacity:0;transform:translateX(-4px);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.credential-secondary:hover .cred-arrow-sm{opacity:.7;transform:translateX(0)}
-.credential-secondary .cred-arrow-sm svg line,.credential-secondary .cred-arrow-sm svg polyline{stroke:var(--signal);stroke-width:1.5;stroke-linecap:square;fill:none}
-.credential-secondary .cred-index{font-family:'Space Mono',monospace;font-size:.66em;color:var(--signal);opacity:.5;margin-right:6px;font-weight:700;vertical-align:top;position:relative;top:.1em;transition:opacity .3s ease}
-.credential-secondary:hover .cred-index{opacity:1}
-.hero-cta{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.6rem,1.32vw,.9rem);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:clamp(12px,1.8%,19px) clamp(22px,3%,38px);background:var(--accent);border:none;position:relative;overflow:hidden;cursor:pointer;transition:all .3s cubic-bezier(.16,1,.3,1);opacity:0;animation:contentIn .4s ease-out 2.75s forwards}
-.hero-cta::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateX(-101%);transition:transform .4s cubic-bezier(.16,1,.3,1);z-index:0}
-.hero-cta:hover::before{transform:translateX(0)}
-.hero-cta:hover{color:var(--accent)}
-.hero-cta span,.hero-cta .cta-arrow-wrap{position:relative;z-index:1;transition:color .3s ease}
-.hero-cta:hover .cta-arrow line,.hero-cta:hover .cta-arrow polyline{stroke:var(--accent)}
-.cta-arrow{display:block}
-.cta-arrow line,.cta-arrow polyline{stroke:var(--ink);stroke-width:2;stroke-linecap:square;fill:none;transition:stroke .3s ease}
-.content-section{position:relative;z-index:1;width:100%;background:var(--bg);padding:clamp(24px,4%,60px) clamp(22px,6%,90px);padding-right:10%;opacity:0;animation:sectionReveal .5s ease-out forwards}
-.content-section:nth-of-type(1){animation-delay:2.9s}
-.content-section:nth-of-type(2){animation-delay:3.1s}
-.content-section::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
-.content-section .page-index{font-size:clamp(.63rem,1.5vw,.9rem)}
-.section-header{margin-bottom:clamp(16px,3%,40px)}
-.content-blocks{display:flex;flex-direction:column;gap:clamp(20px,3.5%,45px);width:100%}
-.content-block{position:relative;padding-left:clamp(12px,2.5%,28px);border-left:2px solid var(--ghost);transition:border-color .4s ease;width:100%}
-.content-block:hover{border-left-color:var(--accent)}
-.block-category{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--signal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:clamp(4px,1%,10px);opacity:.8}
-.block-title{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.55rem,1.6vw,1.1rem);color:var(--ink);line-height:1.3;letter-spacing:-.01em;margin-bottom:clamp(6px,1.2%,14px);word-wrap:break-word;overflow-wrap:break-word}
-.block-title .inline-link{color:var(--ink);text-decoration:none;position:relative;transition:color .3s ease}
-.block-title .inline-link::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.block-title .inline-link:hover::after{transform:scaleX(1)}
-.block-meta{display:flex;flex-direction:column;gap:clamp(2px,.4%,5px);margin-bottom:clamp(8px,1.5%,16px)}
-.block-meta-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.meta-label{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.45rem,1.1vw,.75rem);color:var(--muted);letter-spacing:.15em;text-transform:uppercase;flex-shrink:0;opacity:.7}
-.meta-link{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);text-decoration:none;letter-spacing:.02em;line-height:1.4;position:relative;transition:color .3s ease;word-wrap:break-word;overflow-wrap:break-word}
-.meta-link .meta-text{position:relative;display:inline}
-.meta-link .meta-text::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.meta-link:hover .meta-text::after{transform:scaleX(1)}
-.meta-link:hover{color:var(--ink)}
-.meta-value{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);letter-spacing:.02em;line-height:1.4}
-.block-actions{display:flex;align-items:center;flex-wrap:wrap;gap:clamp(6px,1.5%,16px)}
-.block-action{display:inline-flex;align-items:center;gap:5px;font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);text-decoration:none;letter-spacing:.04em;position:relative;transition:color .3s ease;cursor:pointer}
-.block-action .action-text{position:relative;display:inline;transition:color .3s ease}
-.block-action .action-text::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.block-action:hover .action-text::after{transform:scaleX(1)}
-.block-action:hover .action-text{color:var(--ink)}
-.block-action .action-arrow{display:inline-block;opacity:0;transform:translateX(-4px);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.block-action:hover .action-arrow{opacity:.7;transform:translateX(0)}
-.block-action .action-arrow svg line,.block-action .action-arrow svg polyline{stroke:var(--signal);stroke-width:1.5;stroke-linecap:square;fill:none}
-.action-divider{width:1px;height:14px;background:var(--ghost);flex-shrink:0}
-.social-ribbon{position:relative;z-index:1;width:100%;background:var(--bg);display:flex;align-items:center;justify-content:flex-start;padding:clamp(16px,2.5%,28px) clamp(22px,6%,90px);gap:clamp(8px,1.5%,16px);flex-wrap:nowrap;white-space:nowrap;opacity:0;animation:sectionReveal .5s ease-out 3.3s forwards}
-.social-ribbon::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
-.social-link{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(.53rem,1.38vw,.94rem);color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;position:relative;transition:color .3s ease;display:inline-flex;align-items:center;gap:5px}
-.social-link .link-text{position:relative;display:inline}
-.social-link .link-text::after{content:'';position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.social-link:hover .link-text::after{transform:scaleX(1)}
-.social-link:hover{color:var(--ink)}
-.social-link .link-arrow{display:inline-block;opacity:0;transform:translateX(-4px);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.social-link:hover .link-arrow{opacity:.7;transform:translateX(0)}
-.social-link .link-arrow svg line,.social-link .link-arrow svg polyline{stroke:var(--signal);stroke-width:1.5;stroke-linecap:square;fill:none}
-.ribbon-cross{width:clamp(10px,1.8vw,20px);height:clamp(10px,1.8vw,20px);position:relative;flex-shrink:0;animation:crossSpin 20s linear infinite}
-.ribbon-cross::before,.ribbon-cross::after{content:'';position:absolute;top:50%;left:50%;background:var(--signal)}
-.ribbon-cross::before{width:100%;height:2px;transform:translate(-50%,-50%)}
-.ribbon-cross::after{width:2px;height:100%;transform:translate(-50%,-50%)}
-.ribbon-cross .cross-ring{position:absolute;inset:-2px;border:1px solid var(--signal);border-radius:50%;opacity:.3;animation:ringPulse 3s ease-in-out infinite}
-.ribbon-cross:nth-of-type(2) .cross-ring{animation-delay:1.5s}
-.site-footer{position:relative;z-index:1;width:100%;background:var(--bg);padding:clamp(14px,2%,24px) clamp(22px,6%,90px);opacity:0;animation:sectionReveal .5s ease-out 3.5s forwards}
-.site-footer::before{content:'';position:absolute;left:0;top:0;width:clamp(4px,.6%,10px);height:100%;background:var(--accent)}
-.footer-text{font-family:'Space Mono',monospace;font-weight:400;font-size:clamp(.42rem,1vw,.7rem);color:var(--muted);letter-spacing:.08em;opacity:.6}
-@media(max-width:900px){.hero-content{max-width:100%}.hero-bg .ghost-letter{font-size:clamp(12rem,45vw,28rem);right:-5%}.hero-name{white-space:normal}}
-@media(max-width:680px){.hero-content{padding-left:clamp(18px,6%,40px);padding-right:12%}.hero-name{font-size:clamp(1.8rem,9vw,3rem)}.tag-segment{font-size:clamp(.48rem,2.5vw,.78rem)}.spin-cross{width:clamp(8px,3vw,14px);height:clamp(8px,3vw,14px)}.hero-bg .ghost-letter{font-size:clamp(10rem,50vw,18rem);right:-8%;top:-3%}.hero-bg .accent-bar{width:4px}.float-shape.circle-ring,.float-shape.cross-mark{display:none}.coord-mark.c2,.coord-mark.c3{display:none}.credential-primary{font-size:clamp(.5rem,2.5vw,.82rem)}.credential-secondary{font-size:clamp(.46rem,2.4vw,.75rem)}.research-focus p{font-size:clamp(.46rem,2.4vw,.75rem)}.content-section{padding-left:clamp(18px,6%,40px);padding-right:8%}.content-section::before{width:4px}.content-section .page-index{font-size:clamp(.53rem,2.5vw,.72rem)}.block-title{font-size:clamp(.5rem,2.5vw,.82rem)}.block-category{font-size:clamp(.46rem,2.4vw,.75rem)}.meta-label{font-size:clamp(.4rem,1.9vw,.6rem)}.meta-link,.meta-value,.block-action{font-size:clamp(.46rem,2.4vw,.75rem)}.block-meta-row{flex-direction:column;gap:2px}.block-actions{flex-direction:column;align-items:flex-start;gap:clamp(5px,1.5%,10px)}.action-divider{display:none}.social-ribbon{padding-left:clamp(18px,6%,40px)}.social-ribbon::before{width:4px}.social-link{font-size:clamp(.46rem,2.9vw,.75rem)}.ribbon-cross{width:clamp(8px,2.7vw,14px);height:clamp(8px,2.7vw,14px)}.site-footer{padding-left:clamp(18px,6%,40px)}.site-footer::before{width:4px}}
-@media(max-width:520px){.hero-tagline{flex-wrap:wrap;white-space:normal}.social-ribbon{flex-wrap:wrap;white-space:normal}.hero-name .name-line{display:block}}
-@media(max-width:420px){.hero-content{padding-left:16px;padding-right:10%}.hero-name{font-size:clamp(1.5rem,10vw,2.2rem);letter-spacing:-.03em}.tag-segment{font-size:clamp(.42rem,3vw,.58rem);letter-spacing:.04em}.spin-cross{width:8px;height:8px}.spin-cross::before{height:1.5px}.spin-cross::after{width:1.5px}.hero-cta{padding:10px 18px;font-size:.55rem}.hero-bg .ghost-letter{font-size:10rem;opacity:.3}.hero-bg .accent-bar{width:3px}.page-index{font-size:.57rem}.content-section .page-index{font-size:.57rem}.landing-name{font-size:clamp(1.4rem,7vw,1.8rem)}.landing-overlay{padding:10% 5%}.float-shape.diamond{display:none}.credential-primary{font-size:clamp(.46rem,3.2vw,.7rem)}.credential-secondary{font-size:clamp(.42rem,3.36vw,.66rem)}.research-focus{padding-left:clamp(10px,3%,16px)}.research-focus p{font-size:clamp(.42rem,3.36vw,.66rem);line-height:1.6}.research-focus::before{width:2px}.content-section{padding-left:16px;padding-right:5%}.content-section::before{width:3px}.block-title{font-size:clamp(.46rem,3.2vw,.7rem)}.block-category{font-size:clamp(.42rem,3.36vw,.66rem)}.meta-link,.meta-value,.block-action{font-size:clamp(.42rem,3.36vw,.66rem)}.meta-label{font-size:clamp(.36rem,2.7vw,.52rem)}.section-header{margin-bottom:clamp(14px,3.5%,28px)}.content-block{padding-left:clamp(10px,3%,16px)}.social-ribbon{padding:12px 16px;gap:6px}.social-ribbon::before{width:3px}.social-link{font-size:clamp(.42rem,3.5vw,.66rem);letter-spacing:.05em}.ribbon-cross{width:8px;height:8px}.ribbon-cross::before{height:1.5px}.ribbon-cross::after{width:1.5px}.site-footer{padding:10px 16px}.site-footer::before{width:3px}.footer-text{font-size:clamp(.38rem,2.8vw,.55rem)}}
-</style>
+<meta property="og:url" content="https://www.asifhasanzeshan.xyz/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&text=0.1&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<canvas id="entropy-bg"></canvas>
-<div class="landing-overlay" aria-hidden="true">
-<div class="landing-inner">
-<div class="landing-name">AHZ<span class="accent-dot">.</span></div>
-<div class="landing-rule"></div>
-<div class="landing-sub">Research × Design × Cognition</div>
-</div>
-</div>
-<section class="hero" role="banner">
-<div class="hero-bg" aria-hidden="true">
-<div class="ghost-letter">Z</div>
-<div class="accent-bar"></div>
-<div class="dot-grid"></div>
-<span class="coord-mark c1">23.43°N / 90.23°E</span>
-<span class="coord-mark c2">δ = 0.0042</span>
-<span class="coord-mark c3">fig.001</span>
-<div class="float-shape diamond"></div>
-<div class="float-shape circle-ring"></div>
-<div class="float-shape cross-mark"></div>
-</div>
-<div class="hero-content">
-<div class="page-index hero-page-index"><span class="idx-num">001</span><span class="idx-dash">——</span><span class="idx-label">Home</span></div>
-<h1 class="hero-name"><span class="name-line"><span class="name-first">Asif</span></span> <span class="name-line"><span class="name-mid">Hasan</span></span> <span class="name-line"><span class="name-last">Zeshan</span></span></h1>
-<div class="hero-tagline">
-<span class="tag-segment">Design Intelligence</span>
-<span class="spin-cross"><span class="cross-ring"></span></span>
-<span class="tag-segment">Creative Learning</span>
-<span class="spin-cross"><span class="cross-ring"></span></span>
-<span class="tag-segment">Synthetic Cognition</span>
-</div>
-<div class="research-focus">
-<p>My work explores the integration of data-driven methods in <span class="highlight">creative learning</span> and design practices with a focus on <span class="highlight">synthetic intelligence</span>. I investigate how data-driven frameworks can evaluate creativity in <span class="highlight">architecture</span> and adjacent fields, while examining how Artificial Intelligence is reshaping both the learning process and the built environments it influences.</p>
-</div>
-<div class="credentials-block">
-<a href="https://azcast.arizona.edu/person/asif-hasan-zeshan" target="_blank" rel="noopener" class="credential-primary"><span class="cred-label">PhD Student, College of Information Science, University of Arizona</span><span class="cred-arrow"><svg width="14" height="11" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,1 13,6 8,11"/></svg></span></a>
-<a href="https://capla.arizona.edu/studio/class-2024-harnessing-ai-architecture" target="_blank" rel="noopener" class="credential-secondary"><span class="cred-index">01</span><span class="cred-text">MS Architecture, CAPLA, University of Arizona</span><span class="cred-arrow-sm"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-<a href="https://arch.buet.ac.bd/degrees/B%20Arch" target="_blank" rel="noopener" class="credential-secondary"><span class="cred-index">02</span><span class="cred-text">Bachelor of Architecture, Bangladesh University of Engineering & Technology</span><span class="cred-arrow-sm"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-<a href="https://wees.arizona.edu/r4r/cohorts/fall-2023" target="_blank" rel="noopener" class="credential-secondary"><span class="cred-index">03</span><span class="cred-text">Roots 4 Resilience Fellow (2023–24), Arizona Institute of Resilience (AIR), NSF Cyverse & Data Science Institute</span><span class="cred-arrow-sm"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-</div>
-<a href="#contact" class="hero-cta"><span>Get in Touch</span><span class="cta-arrow-wrap"><svg class="cta-arrow" width="16" height="12" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,1 13,6 8,11"/></svg></span></a>
-</div>
-</section>
-<section class="content-section">
-<div class="section-header"><div class="page-index"><span class="idx-num">002</span><span class="idx-dash">——</span><span class="idx-label">Featured Research</span></div></div>
-<div class="content-blocks">
-<div class="content-block">
-<div class="block-category">Design Intelligence</div>
-<h2 class="block-title">Meta-morphing Architectural Domains: The Role of Humans and AI in Posthuman Architecture</h2>
-<div class="block-meta">
-<div class="block-meta-row"><span class="meta-label">With</span><a href="https://capla.arizona.edu/faculty-staff/susannah-dickinson" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">Susannah Dickinson</span></a></div>
-<div class="block-meta-row"><span class="meta-label">At</span><a href="https://www.xjtlu.edu.cn/en/study/departments/design-school/architecture/xarch2026/xarch-2023" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">xArch 2023 — Xi'an Jiaotong-Liverpool University</span></a></div>
-</div>
-<div class="block-actions">
-<a href="https://link.springer.com/chapter/10.1007/978-981-97-0621-1_30" target="_blank" rel="noopener" class="block-action"><span class="action-text">Read the Paper »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-<div class="action-divider"></div>
-<a href="https://www.youtube.com/watch?v=zxKMamVhsPg" target="_blank" rel="noopener" class="block-action"><span class="action-text">Watch the Conference Presentation »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-</div>
-</div>
-<div class="content-block">
-<div class="block-category">Creative Learning</div>
-<h2 class="block-title">Reframing Creative Learning: A Conceptual Framework for Design Literacy in the GenAI Era</h2>
-<div class="block-meta">
-<div class="block-meta-row"><span class="meta-label">With</span><a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">Dr. Xiao Hu</span></a></div>
-<div class="block-meta-row"><span class="meta-label">At</span><a href="https://www.ischools.org/post/iconference-2026-call-for-papers" target="_blank" rel="noopener" class="meta-link"><span class="meta-text">iConference 2026 — Edinburgh Napier University</span></a></div>
-</div>
-<div class="block-actions"><a href="https://www.asifhasanzeshan.xyz/projects/genaicreativelearning.html" target="_top" onclick="window.top.location.href=this.href;return false;" class="block-action"><span class="action-text">Explore the Project »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
-</div>
-</div>
-</section>
-<section class="content-section">
-<div class="section-header"><div class="page-index"><span class="idx-num">003</span><span class="idx-dash">——</span><span class="idx-label">Dispatch</span></div></div>
-<div class="content-blocks">
-<div class="content-block">
-<div class="block-category">Award</div>
-<h2 class="block-title">Awarded "Best Poster Award" at the 2026 ARCC-EAAE International Conference</h2>
-<div class="block-meta">
-<div class="block-meta-row"><span class="meta-label">Where</span><span class="meta-value">Atlanta, GA, USA</span></div>
-<div class="block-meta-row"><span class="meta-label">When</span><span class="meta-value">April 08, 2026 — April 11, 2026</span></div>
-</div>
-<div class="block-actions"><a href="https://www.arcc-arch.org/meet-the-arcc-2026-awards-recipients/" target="_blank" rel="noopener" class="block-action"><span class="action-text">ARCC-EAAE 2026 Award Winners »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
-</div>
-<div class="content-block">
-<div class="block-category">Exhibition</div>
-<h2 class="block-title">Hosted "Stories on Three Wheels" Exhibition and Award Ceremony in Collaboration with <a href="https://www.claymire.site" target="_blank" rel="noopener" class="inline-link">Claymire</a></h2>
-<div class="block-meta">
-<div class="block-meta-row"><span class="meta-label">Where</span><span class="meta-value">Dhaka, Bangladesh</span></div>
-<div class="block-meta-row"><span class="meta-label">When</span><span class="meta-value">May 16, 2026</span></div>
-</div>
-<div class="block-actions"><a href="https://www.claymire.site/past-competition/stories-on-three-wheels/competition-entries" target="_blank" rel="noopener" class="block-action"><span class="action-text">Explore Highlighted Entries »</span><span class="action-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a></div>
-</div>
-</div>
-</section>
-<div class="social-ribbon">
-<a href="https://www.linkedin.com/in/zeshan67/" target="_blank" rel="noopener" class="social-link"><span class="link-text">LinkedIn</span><span class="link-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-<span class="ribbon-cross"><span class="cross-ring"></span></span>
-<a href="https://scholar.google.com/citations?user=yAMlQUMAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><span class="link-text">Google Scholar</span><span class="link-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-<span class="ribbon-cross"><span class="cross-ring"></span></span>
-<a href="https://github.com/zeshan67" target="_blank" rel="noopener" class="social-link"><span class="link-text">GitHub</span><span class="link-arrow"><svg width="10" height="8" viewBox="0 0 16 12"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 13,6 8,10"/></svg></span></a>
-</div>
-<footer class="site-footer">
-<p class="footer-text">© 2025–26 Asif Hasan Zeshan — Designed at the intersection of data and imagination.</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+    <path d="M3.5 12.5l9-9M5.5 3.5h7v7"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="blueprint" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header" data-tone="paper">
+  <a class="logo-link" href="#top" aria-label="Asif Hasan Zeshan, back to top">
+    <svg class="logo" viewBox="0 0 1338 1500" aria-hidden="true">
+      <defs><clipPath id="eye-clip"><rect class="eye-lid" x="-140" y="-132" width="280" height="264"/></clipPath></defs>
+      <path class="logo-ink" d="M0 0h1338v1339H393L233 1499V1339H0z"/>
+      <path class="logo-paper" d="M32 33h612L32 644zM647 33h657L647 689z"/>
+      <g transform="translate(375 695)" clip-path="url(#eye-clip)">
+        <circle class="logo-yellow" r="132"/>
+        <g class="eye-v is-on"></g>
+        <g class="eye-v" fill="none" stroke-width="12"><circle class="s-ink" r="97" stroke-width="14"/><path class="s-ink" d="M-43.3 -25.0L47.7 -77.5M0.0 -50.0L91.0 2.5M43.3 -25.0L43.3 80.0M43.3 25.0L-47.7 77.5M0.0 50.0L-91.0 -2.5M-43.3 25.0L-43.3 -80.0"/></g>
+        <g class="eye-v"><circle class="logo-ink" r="105"/><g fill="none" class="s-yellow"><circle r="88" stroke-width="5"/><circle r="40" stroke-width="5"/><path d="M-66 -8A66 66 0 0 1 -52 -41" stroke-width="20"/><path d="M-44 -50A66 66 0 0 1 -22 -62" stroke-width="20"/></g><circle class="logo-yellow" r="24"/></g>
+        <g class="eye-v"><g fill="none" class="s-ink" stroke-width="6"><path d="M0 -118C30 -74 22 -32 -5 6C-28 42 -22 82 0 118"/><path d="M-46 66L38 -56"/></g><g class="logo-ink"><circle cx="-46" cy="66" r="8.5"/><circle cx="38" cy="-56" r="8.5"/><circle cx="-5" cy="6" r="7.5"/></g><g class="logo-yellow s-ink" stroke-width="5"><rect x="-9" y="-131" width="18" height="18"/><rect x="-9" y="113" width="18" height="18"/></g></g>
+        <g class="eye-v"><text class="logo-ink eye-num" y="42" text-anchor="middle">0.1</text></g>
+      </g>
+      <g class="logo-yellow"><circle class="logo-dot" cx="759" cy="978" r="27"/><circle class="logo-dot" cx="900" cy="978" r="27"/><circle class="logo-dot" cx="1041" cy="978" r="27"/></g>
+    </svg>
+  </a>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" id="top" data-tone="paper">
+    <h1>
+      <strong>Asif Hasan Zeshan</strong>
+      <span>PhD Student, College of Information Science, University of Arizona</span>
+    </h1>
+
+    <div class="slot" aria-hidden="true">
+      <span class="reel reel--a"><span class="reel-strip"><span>Design</span><span>Creative</span><span>Synthetic</span></span></span>
+      <span class="dim"><span class="dim-label">01 / 09</span></span>
+      <span class="reel reel--b"><span class="reel-strip"><span>Intelligence</span><span>Learning</span><span>Cognition</span></span></span>
+    </div>
+    <p class="sr-only">Research areas: Design Intelligence, Creative Learning and Synthetic Cognition.</p>
+
+    <div class="hero-foot">
+      <div class="hero-text">
+        <p class="hero-sub">My work explores the integration of data-driven methods in creative learning and design practices, with a focus on synthetic intelligence.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#research">Read the research <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <a class="slip" href="#news">
+        <span class="slip-top"><span>Latest · April 2026</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        <span class="slip-title">Best Poster Award at the ARCC-EAAE International Conference</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="statement wrap" data-tone="paper" aria-label="Research statement">
+    <p>I investigate how data-driven frameworks can <mark>evaluate creativity</mark> in architecture and adjacent fields, and how <mark>artificial intelligence</mark> is reshaping both the learning process and the <mark>built environments</mark> it influences.</p>
+  </section>
+
+  <section class="section threads" id="threads" data-tone="ink">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three research threads</h2>
+        <p>Design × learning × cognition</p>
+      </div>
+      <ul class="thread-list">
+        <li class="thread">
+          <h3>Design Intelligence</h3>
+          <p>Data-driven frameworks for evaluating creativity in architecture and the fields next to it.</p>
+        </li>
+        <li class="thread">
+          <h3>Creative Learning</h3>
+          <p>How generative AI changes the way designers learn, and what design literacy means in the GenAI era.</p>
+        </li>
+        <li class="thread">
+          <h3>Synthetic Cognition</h3>
+          <p>Synthetic intelligence as a participant in design practice, and its effect on the built environment.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="research" data-tone="paper">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Featured research</h2>
+        <p><a class="link" href="https://scholar.google.com/citations?user=yAMlQUMAAAAJ&hl=en" target="_blank" rel="noopener">See all papers on Google Scholar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      </div>
+      <div class="rows">
+        <article class="row">
+          <p class="row-key"><b>Design Intelligence</b>xArch 2023</p>
+          <div>
+            <h3>Meta-morphing Architectural Domains: The Role of Humans and AI in Posthuman Architecture</h3>
+            <p class="row-meta">With <a href="https://capla.arizona.edu/faculty-staff/susannah-dickinson" target="_blank" rel="noopener">Susannah Dickinson</a>. Presented at <a href="https://www.xjtlu.edu.cn/en/study/departments/design-school/architecture/xarch2026/xarch-2023" target="_blank" rel="noopener">xArch 2023, Xi'an Jiaotong-Liverpool University</a>.</p>
+          </div>
+          <div class="row-links">
+            <a class="link" href="https://link.springer.com/chapter/10.1007/978-981-97-0621-1_30" target="_blank" rel="noopener">Read the paper <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="link" href="https://www.youtube.com/watch?v=zxKMamVhsPg" target="_blank" rel="noopener">Watch the talk <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="row">
+          <p class="row-key"><b>Creative Learning</b>iConference 2026</p>
+          <div>
+            <h3>Reframing Creative Learning: A Conceptual Framework for Design Literacy in the GenAI Era</h3>
+            <p class="row-meta">With <a href="https://infosci.arizona.edu/person/xiao-hu" target="_blank" rel="noopener">Dr. Xiao Hu</a>. Presented at <a href="https://www.ischools.org/post/iconference-2026-call-for-papers" target="_blank" rel="noopener">iConference 2026, Edinburgh Napier University</a>.</p>
+          </div>
+          <div class="row-links">
+            <a class="link" href="projects/genaicreativelearning.html">See the framework <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="news" data-tone="paper">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Recent news</h2>
+      </div>
+      <div class="rows">
+        <article class="row">
+          <p class="row-key"><b>April 8 to 11, 2026</b>Atlanta, GA, USA</p>
+          <div>
+            <h3>Awarded the Best Poster Award at the 2026 ARCC-EAAE International Conference</h3>
+          </div>
+          <div class="row-links">
+            <a class="link" href="https://www.arcc-arch.org/meet-the-arcc-2026-awards-recipients/" target="_blank" rel="noopener">See the award winners <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="row">
+          <p class="row-key"><b>May 16, 2026</b>Dhaka, Bangladesh</p>
+          <div>
+            <h3>Hosted the “Stories on Three Wheels” exhibition and award ceremony with <a href="https://www.claymire.site" target="_blank" rel="noopener">Claymire</a></h3>
+          </div>
+          <div class="row-links">
+            <a class="link" href="https://www.claymire.site/past-competition/stories-on-three-wheels/competition-entries" target="_blank" rel="noopener">See the highlighted entries <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section background" id="background" data-tone="soft">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Education and fellowships</h2>
+      </div>
+      <ul class="cv-list">
+        <li><a href="https://azcast.arizona.edu/person/asif-hasan-zeshan" target="_blank" rel="noopener">
+          <span><b>PhD student, College of Information Science <i class="cv-now">Now</i></b><span>University of Arizona</span></span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+        <li><a href="https://capla.arizona.edu/studio/class-2024-harnessing-ai-architecture" target="_blank" rel="noopener">
+          <span><b>MS Architecture</b><span>CAPLA, University of Arizona</span></span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+        <li><a href="https://arch.buet.ac.bd/degrees/B%20Arch" target="_blank" rel="noopener">
+          <span><b>Bachelor of Architecture</b><span>Bangladesh University of Engineering &amp; Technology</span></span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+        <li><a href="https://wees.arizona.edu/r4r/cohorts/fall-2023" target="_blank" rel="noopener">
+          <span><b>Roots 4 Resilience Fellow, 2023–24</b><span>Arizona Institute of Resilience, NSF CyVerse &amp; Data Science Institute</span></span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact" data-tone="yellow">
+  <div class="wrap">
+    <h2>Get in touch about research, teaching or design collaborations.</h2>
+    <ul class="contact-links">
+      <li><a href="https://www.linkedin.com/in/zeshan67/" target="_blank" rel="noopener">LinkedIn <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://scholar.google.com/citations?user=yAMlQUMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://github.com/zeshan67" target="_blank" rel="noopener">GitHub <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+    <div class="site-foot">
+      <p>© 2025–26 Asif Hasan Zeshan</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </div>
 </footer>
-<script>
-(function(){var c=document.getElementById('entropy-bg');if(!c)return;var ctx=c.getContext('2d');if(!ctx)return;var w,h,particles=[],time=0,animId;var color='#1A1A1A';function resize(){var dpr=window.devicePixelRatio||1;w=window.innerWidth;h=Math.max(document.documentElement.scrollHeight,window.innerHeight);c.width=w*dpr;c.height=h*dpr;c.style.width=w+'px';c.style.height=h+'px';ctx.setTransform(1,0,0,1,0,0);ctx.scale(dpr,dpr);init()}function Particle(x,y,order){this.x=x;this.y=y;this.originalX=x;this.originalY=y;this.size=1.5;this.order=order;this.vx=(Math.random()-0.5)*1.5;this.vy=(Math.random()-0.5)*1.5;this.influence=0;this.neighbors=[]}Particle.prototype.update=function(){if(this.order){var dx=this.originalX-this.x;var dy=this.originalY-this.y;var cx=0,cy=0;for(var i=0;i<this.neighbors.length;i++){var n=this.neighbors[i];if(!n.order){var d=Math.hypot(this.x-n.x,this.y-n.y);var s=Math.max(0,1-d/120);cx+=n.vx*s;cy+=n.vy*s;this.influence=Math.max(this.influence,s)}}this.x+=dx*0.04*(1-this.influence)+cx*this.influence;this.y+=dy*0.04*(1-this.influence)+cy*this.influence;this.influence*=0.99}else{this.vx+=(Math.random()-0.5)*0.4;this.vy+=(Math.random()-0.5)*0.4;this.vx*=0.95;this.vy*=0.95;this.x+=this.vx;this.y+=this.vy;if(this.x<w*0.5||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1;this.x=Math.max(w*0.5,Math.min(w,this.x));this.y=Math.max(0,Math.min(h,this.y))}};Particle.prototype.draw=function(ctx){var a=this.order?0.7-this.influence*0.4:0.7;var hex=Math.round(a*255).toString(16);if(hex.length<2)hex='0'+hex;ctx.fillStyle=color+hex;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill()};function init(){particles=[];var cols=Math.floor(w/35);var rows=Math.floor(h/35);if(cols<5)cols=5;if(rows<5)rows=5;var sx=w/cols;var sy=h/rows;for(var i=0;i<cols;i++){for(var j=0;j<rows;j++){var x=sx*i+sx/2;var y=sy*j+sy/2;var order=x<w*0.5;particles.push(new Particle(x,y,order))}}}function updateNeighbors(){for(var i=0;i<particles.length;i++){particles[i].neighbors=[];for(var j=0;j<particles.length;j++){if(i===j)continue;var d=Math.hypot(particles[i].x-particles[j].x,particles[i].y-particles[j].y);if(d<120)particles[i].neighbors.push(particles[j])}}}function animate(){ctx.clearRect(0,0,w,h);if(time%30===0)updateNeighbors();for(var i=0;i<particles.length;i++){var p=particles[i];p.update();p.draw(ctx);for(var j=0;j<p.neighbors.length;j++){var n=p.neighbors[j];var d=Math.hypot(p.x-n.x,p.y-n.y);if(d<60){var a=0.15*(1-d/60);var hex=Math.round(a*255).toString(16);if(hex.length<2)hex='0'+hex;ctx.strokeStyle=color+hex;ctx.lineWidth=0.5;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(n.x,n.y);ctx.stroke()}}}time++;animId=requestAnimationFrame(animate)}resize();window.addEventListener('resize',function(){cancelAnimationFrame(animId);resize();animate()});setTimeout(function(){resize();animate()},3000);animate()})();
-</script>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
-
-							<script>
-                            	
-							</script>
-                        </body>
-                        </html>
-                    
